@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuração de IP Fixo - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #333;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            color: #666;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 1rem;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>📘 Guia Prático: Configuração de IP Fixo e Noções de Rede</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🧠 Por que configurar um IP fixo?</h2>
+            <p>Ter um IP fixo significa que o endereço do seu computador na rede sempre será o mesmo.
+            Isso é especialmente útil em empresas, onde servidores, impressoras ou sistemas precisam ser encontrados com facilidade na rede.</p>
+
+            <h3>Em ambientes corporativos:</h3>
+            <ul>
+                <li>Ajuda a manter a organização da rede</li>
+                <li>Facilita a administração dos dispositivos</li>
+                <li>Evita conflitos entre IPs diferentes</li>
+                <li>Melhora o acesso remoto e controle da TI</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Diferença entre IP Fixo e Dinâmico</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Característica</th>
+                    </tr>
+                    <tr>
+                        <td>IP Fixo</td>
+                        <td>Você define o IP manualmente. Ele não muda.</td>
+                    </tr>
+                    <tr>
+                        <td>IP Dinâmico</td>
+                        <td>O roteador define o IP automaticamente. Muda sempre que reinicia o roteador ou dispositivo.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 O que é um Endereço IP?</h2>
+            <p>O IP é como o endereço da sua casa, só que na internet.
+            É ele quem identifica seu computador dentro de uma rede.</p>
+
+            <h3>Tipos de IP:</h3>
+            <ul>
+                <li><strong>IP Público:</strong> visível na internet (representa sua rede externamente)</li>
+                <li><strong>IP Privado:</strong> usado dentro da sua rede local (sua casa ou empresa)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📞 O que é DNS?</h2>
+            <p>DNS significa Sistema de Nomes de Domínio.
+            Ele funciona como uma agenda de contatos da internet.</p>
+
+            <p>👉 Você digita www.google.com, e o DNS descobre qual é o IP verdadeiro do Google para te conectar.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧪 Como usar o ipconfig para ver informações da rede</h2>
+            <ol>
+                <li>Pressione Windows + R</li>
+                <li>Digite cmd e pressione Enter</li>
+                <li>No terminal, digite: ipconfig</li>
+            </ol>
+
+            <p>Você verá informações como:</p>
+            <ul>
+                <li><strong>IPv4:</strong> Seu endereço de IP atual</li>
+                <li><strong>Máscara de sub-rede:</strong> Define o tamanho da rede</li>
+                <li><strong>Gateway padrão:</strong> Geralmente é o IP do seu roteador (ex: 192.168.0.1)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔢 Diferença entre IPv4 e IPv6</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Versão</th>
+                        <th>Exemplo</th>
+                        <th>Característica</th>
+                    </tr>
+                    <tr>
+                        <td>IPv4</td>
+                        <td>192.168.0.1</td>
+                        <td>Mais comum, limitado a 4 bilhões de IPs</td>
+                    </tr>
+                    <tr>
+                        <td>IPv6</td>
+                        <td>2001:0db8:85a3:0000:0000:8a2e...</td>
+                        <td>Mais moderno, praticamente infinito</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚪 O que é o Gateway Padrão?</h2>
+            <p>O gateway padrão é como o porteiro da sua rede.
+            Ele recebe os dados do seu computador e os encaminha para a internet.</p>
+
+            <p>Geralmente, em redes domésticas, ele é o roteador Wi-Fi.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Como configurar um IP fixo no Windows (Passo a Passo)</h2>
+            <ol>
+                <li>Pressione Windows + R, digite ncpa.cpl e pressione Enter</li>
+                <li>Clique com o botão direito do mouse na conexão de rede ativa (Wi-Fi ou Ethernet) e vá em Propriedades</li>
+                <li>Dê dois cliques em Protocolo IP Versão 4 (TCP/IPv4)</li>
+                <li>Marque a opção "Usar o seguinte endereço IP" e preencha:</li>
+            </ol>
+
+            <div class="code-block">
+Endereço IP:        192.168.0.50
+Máscara de sub-rede: 255.255.255.0
+Gateway padrão:     192.168.0.1
+DNS preferencial:   8.8.8.8
+DNS alternativo:    8.8.4.4</div>
+
+            <p>Clique em OK para aplicar.</p>
+
+            <h3>✅ Pronto!</h3>
+            <p>Seu computador agora tem um IP fixo.
+            Ele não vai mais mudar sozinho, e isso facilita muito o acesso remoto, compartilhamento de arquivos e uso em rede.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima.. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

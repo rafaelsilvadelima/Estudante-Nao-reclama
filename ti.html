@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.I - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .accordion-section {
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: #007bff;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: #0056b3;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content.active {
+            max-height: 1000px;
+        }
+
+        .article-list {
+            padding: 1rem;
+        }
+
+        .article-item {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-item p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .read-more {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Voltar</a>
+        <h1>Tecnologia da Informação</h1>
+        <p>Explore o mundo da T.I</p>
+    </header>
+
+    <main>
+        <!-- <div class="accordion-section">
+            <div class="accordion-header">
+                <h2>Arquitetura Básica</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="article-list">
+                    <div class="article-item">
+                        <h3>Hardware e Componentes</h3>
+                        <p>Conheça os principais componentes de um computador e suas funções.</p>
+                        <a href="#" class="read-more">Em Breve →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Sistemas Operacionais</h3>
+                        <p>Aprenda sobre os diferentes sistemas operacionais e suas características.</p>
+                        <a href="#" class="read-more">Em Breve  →</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h2>Suporte Técnico</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="article-list">
+                    <div class="article-item">
+                        <h3>Instalação do Chrome OS Flex</h3>
+                        <p>Guia completo para instalar o Chrome OS Flex no seu computador.</p>
+                        <a href="TI/chrome-os-flex.html" class="read-more">Ver Mais  →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Como Criar um Pendrive Bootável</h3>
+                        <p>Guia completo para criar um pendrive bootável para instalação de sistemas operacionais.</p>
+                        <a href="TI/pendrive-bootavel.html" class="read-more">Ver Mais  →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header">
+                <h2>Redes de Computador</h2>
+                <span class="accordion-icon">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="article-list">
+                    <div class="article-item">
+                        <h3>Guia Prático: Configuração de IP Fixo e Noções de Rede</h3>
+                        <p>Guia completo para configurar IP fixo e entender conceitos básicos de rede.</p>
+                        <a href="TI/ip-fixo.html" class="read-more">Ver Mais  →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Guia Prático: Compartilhar e Acessar Pastas na Rede (Windows)</h3>
+                        <p>Aprenda a compartilhar e acessar pastas em rede no Windows de forma segura e eficiente.</p>
+                        <a href="TI/compartilhar-pastas.html" class="read-more">Ver Mais  →</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.accordion-icon');
+                
+                // Toggle active class
+                header.classList.toggle('active');
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

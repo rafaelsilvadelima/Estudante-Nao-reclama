@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .article-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .article-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .article-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">← Voltar</a>
+        <h1>Informática</h1>
+        <p>Aprenda conceitos básicos e avançados</p>
+    </header>
+
+    <main>
+        <div class="article-list">
+            <article class="article-card">
+                <h3>Introdução ao Windows</h3>
+                <p>Aprenda os conceitos básicos do sistema operacional Windows, incluindo gerenciamento de arquivos, configurações e ferramentas essenciais.</p>
+                <a href="#" class="read-more">Ler mais →</a>
+            </article>
+
+            <article class="article-card">
+                <h3>Microsoft Office</h3>
+                <p>Domine as ferramentas do pacote Office: Word, Excel e PowerPoint para aumentar sua produtividade.</p>
+                <a href="#" class="read-more">Ler mais →</a>
+            </article>
+
+            <article class="article-card">
+                <h3>Segurança Digital</h3>
+                <p>Aprenda práticas essenciais de segurança digital para proteger seus dados e navegar com segurança na internet.</p>
+                <a href="#" class="read-more">Ler mais →</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Blog Educacional. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalação do Chrome OS Flex - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .guide-section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .guide-section h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-section h3 {
+            color: #333;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .guide-section p, .guide-section ul {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .guide-section ul {
+            list-style-position: inside;
+            padding-left: 1rem;
+        }
+
+        .guide-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .tip {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        .step {
+            border-left: 3px solid #007bff;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Instalação do Chrome OS Flex</h1>
+        <p>Guia passo a passo para instalar o Chrome OS Flex no seu computador</p>
+    </header>
+
+    <main>
+        <div class="guide-section">
+            <h2>📦 Etapa 1: Preparando o pendrive com o Chrome OS</h2>
+            
+            <div class="step">
+                <h3>1.1 – Instale o Google Chrome</h3>
+                <p>Se você ainda não tem o Google Chrome instalado:</p>
+                <ul>
+                    <li>Acesse: <a href="https://www.google.com/chrome/" target="_blank">https://www.google.com/chrome/</a></li>
+                    <li>Baixe e instale como qualquer outro programa (é só seguir os passos)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>1.2 – Instale o Chromebook Recovery Utility</h3>
+                <p>Com o Google Chrome aberto:</p>
+                <ul>
+                    <li>Vá para a loja de extensões: <a href="https://chrome.google.com/webstore/detail/chromebook-recovery-utili/pocpnlppkickgojjlmhdmidojbmbodfm" target="_blank">Clique aqui</a></li>
+                    <li>Clique em "Usar no Chrome" e depois em "Adicionar extensão"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>1.3 – Crie o pendrive com o Chrome OS Flex</h3>
+                <ul>
+                    <li>Abra a extensão Chromebook Recovery Utility (ícone aparece no canto superior direito do Chrome)</li>
+                    <li>Clique em "Iniciar"</li>
+                    <li>Escolha:
+                        <ul>
+                            <li>Fabricante: "Google Chrome OS Flex"</li>
+                            <li>Modelo: "Chrome OS Flex (Developer-Unstable)"</li>
+                        </ul>
+                    </li>
+                    <li>Insira o seu pendrive e selecione ele na lista</li>
+                    <li>Clique em "Continuar" e depois em "Criar agora"</li>
+                    <li>Espere o processo terminar (leva de 5 a 15 minutos)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>🧑‍🔧 Etapa 2: Instalando o Chrome OS Flex no computador</h2>
+            
+            <div class="warning">
+                <strong>⚠️ Importante:</strong>
+                <p>Antes de instalar, faça backup de tudo que você tem no computador, pois tudo será apagado.</p>
+            </div>
+
+            <div class="step">
+                <h3>2.1 – Preparação inicial</h3>
+                <p>Coloque o pendrive no computador onde quer instalar o Chrome OS.</p>
+            </div>
+
+            <div class="step">
+                <h3>2.2 – Entre no menu de boot</h3>
+                <p>Você precisa dizer ao PC que ele deve iniciar pelo pendrive. Assim que ligar o PC, fique pressionando uma das teclas abaixo (tente uma por vez até funcionar):</p>
+                <ul>
+                    <li>F12 (muito comum)</li>
+                    <li>F10</li>
+                    <li>ESC</li>
+                    <li>DEL</li>
+                    <li>F2</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>2.3 – Escolha o pendrive como dispositivo de boot</h3>
+                <ul>
+                    <li>Use as setas do teclado e escolha o nome do pendrive</li>
+                    <li>Aperte Enter</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>2.4 – Iniciando o Chrome OS Flex</h3>
+                <p>O sistema vai rodar direto do pendrive (não está instalado ainda). Espere alguns segundos.</p>
+            </div>
+        </div>
+
+        <div class="guide-section">
+            <h2>💾 Etapa 3: Instalar o Chrome OS Flex de verdade</h2>
+            <ul>
+                <li>Quando aparecer a tela do Chrome OS Flex, clique em "Iniciar"</li>
+                <li>Siga as instruções (elas são bem simples e em português)</li>
+                <li>Quando perguntar se quer "Testar sem instalar" ou "Instalar agora", escolha Instalar agora</li>
+                <li>Confirme que você quer apagar tudo e instalar o sistema</li>
+            </ul>
+            <p>🕐 O processo leva de 10 a 30 minutos. Depois disso, o computador vai reiniciar sozinho.</p>
+        </div>
+
+        <div class="guide-section">
+            <h2>🚀 Etapa 4: Configurando o sistema pela primeira vez</h2>
+            <ul>
+                <li>Depois de reiniciar, siga os passos para conectar à internet</li>
+                <li>Faça login com sua conta do Google (Gmail)</li>
+                <li>Pronto! Você está no Chrome OS! 🎉</li>
+            </ul>
+        </div>
+
+        <div class="guide-section">
+            <h2>👩‍🏫 Dicas Finais</h2>
+            <div class="tip">
+                <ul>
+                    <li>O Chrome OS é feito para funcionar com internet, então aproveite bem os apps da web (YouTube, Google Docs, Drive, etc.)</li>
+                    <li>Você pode instalar apps da Play Store apenas em Chromebooks oficiais, mas no Flex você pode usar apps da web e alguns apps Linux (se quiser algo mais avançado depois)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Criar um Pendrive Bootável - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        article {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2, h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        .important-note {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .step {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>💽 Guia Completo: Como Criar um Pendrive Bootável para Instalar Sistemas Operacionais</h1>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>🧾 O que é um Pendrive Bootável?</h2>
+                <p>Um pendrive bootável é um pendrive especial, preparado para iniciar (ou "dar boot") no computador, carregando o instalador de um sistema operacional (como o Windows, Linux, etc.).</p>
+                <p>👉 Ele é muito usado para formatar um computador ou instalar um novo sistema, principalmente quando o computador não tem leitor de CD/DVD.</p>
+            </section>
+
+            <section>
+                <h2>🧱 O que é uma Imagem ISO?</h2>
+                <p>Uma imagem ISO é um arquivo digital que contém todos os dados de um DVD ou CD, como o instalador do Windows, por exemplo.</p>
+                <p>📂 Exemplo: você pode baixar um arquivo chamado Windows11.iso. Esse arquivo representa todo o conteúdo de instalação do Windows 11.</p>
+                <div class="important-note">
+                    <p>🛑 Importante: não basta copiar a ISO para o pendrive. É necessário usar um programa especial que coloque a ISO de forma que o computador consiga "enxergar" e usar esse pendrive como disco de instalação.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>🧰 O que você vai precisar:</h2>
+                <ul>
+                    <li>✅ Um pendrive com pelo menos 8 GB (para Linux simples) ou 16 GB ou mais (para Windows).</li>
+                    <li>✅ O arquivo ISO do sistema operacional.</li>
+                    <li>✅ Um programa para preparar o pendrive (ex: Rufus).</li>
+                    <li>✅ Um computador com porta USB funcional.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🛠️ Etapa 1 – Baixar um Criador de Pendrive Bootável</h2>
+                <p>Estes são os programas mais populares para criar pendrives bootáveis:</p>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Programa</th>
+                            <th>Indicado para...</th>
+                            <th>Site Oficial</th>
+                        </tr>
+                        <tr>
+                            <td>Rufus</td>
+                            <td>Windows, Linux, etc.</td>
+                            <td>rufus.ie</td>
+                        </tr>
+                        <tr>
+                            <td>Balena Etcher</td>
+                            <td>Fácil e multiplataforma</td>
+                            <td>balena.io/etcher</td>
+                        </tr>
+                        <tr>
+                            <td>Ventoy</td>
+                            <td>Usar várias ISOs no mesmo pendrive</td>
+                            <td>ventoy.net</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2>💡 Etapa 2 – Como Criar um Pendrive Bootável com o Rufus</h2>
+                <p>Passo a passo com explicação:</p>
+                <ol>
+                    <li>Baixe o Rufus no site oficial (ele funciona sem instalar).</li>
+                    <li>Insira o pendrive no computador.</li>
+                    <li>Abra o Rufus — ele já detecta o pendrive automaticamente.</li>
+                    <li>Em "Dispositivo", verifique se o seu pendrive está selecionado.</li>
+                    <li>Em "Selecionar", escolha o arquivo ISO que você baixou.</li>
+                    <li>As opções abaixo são preenchidas automaticamente (pode deixar como estão).</li>
+                    <li>Clique em "Iniciar".</li>
+                    <li>O Rufus avisará que o conteúdo do pendrive será apagado — confirme.</li>
+                    <li>Aguarde até o processo terminar (pode levar de 5 a 20 minutos).</li>
+                </ol>
+                <p>🔄 Pronto! Agora você tem um pendrive pronto para iniciar um computador e instalar um sistema operacional.</p>
+            </section>
+
+            <section>
+                <h2>💻 Etapa 3 – Fazer o Computador Reconhecer o Pendrive na Inicialização</h2>
+                <h3>🧭 3.1 – Tentando o Menu de Boot</h3>
+                <p>Assim que você ligar o computador, uma das primeiras telas que aparece (geralmente com o logotipo da marca) costuma exibir uma mensagem assim:</p>
+                <div class="step">
+                    <p>Pressione F12 para Boot Menu</p>
+                    <p>Pressione ESC para Setup</p>
+                </div>
+                <p>👀 Fique atento! Essa mensagem mostra qual tecla você deve apertar para acessar o menu de boot — um atalho que permite escolher de onde o computador deve iniciar, como por exemplo: do pendrive, do HD, etc.</p>
+
+                <h4>Teclas mais comuns (varia conforme o fabricante):</h4>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Marca do PC / Notebook</th>
+                            <th>Tecla de Boot</th>
+                        </tr>
+                        <tr>
+                            <td>Acer, Dell, Lenovo</td>
+                            <td>F12</td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td>ESC ou F9</td>
+                        </tr>
+                        <tr>
+                            <td>ASUS</td>
+                            <td>F8</td>
+                        </tr>
+                        <tr>
+                            <td>Samsung</td>
+                            <td>F2 ou ESC</td>
+                        </tr>
+                        <tr>
+                            <td>Positivo / Multilaser</td>
+                            <td>F11 ou ESC</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h3>⚙️ 3.2 – E se o Menu de Boot não aparecer?</h3>
+                <p>👉 Nesse caso, a gente vai acessar a BIOS ou UEFI, que é a "central de configuração" do computador.</p>
+                <p>📌 A BIOS é uma tela azul ou preta com várias opções que aparece antes mesmo do Windows iniciar.</p>
+                <p>Ela controla como o computador se comporta ao ser ligado, como por exemplo: o que deve iniciar primeiro (pendrive, HD, DVD, etc.).</p>
+
+                <h4>Por que precisamos ir na BIOS?</h4>
+                <p>Porque talvez o computador não esteja configurado para reconhecer o pendrive na inicialização.</p>
+                <p>Então, precisamos dizer pra ele: "ei, primeiro olhe o pendrive, depois o HD!"</p>
+
+                <h4>🧩 Passo a passo para configurar na BIOS:</h4>
+                <ol>
+                    <li>Reinicie o computador.</li>
+                    <li>Assim que ele começar a ligar, fique pressionando uma tecla como DEL, F2 ou ESC (varia de acordo com o modelo).</li>
+                    <li>Quando entrar na BIOS, procure uma aba chamada:
+                        <ul>
+                            <li>Boot</li>
+                            <li>Boot Order</li>
+                            <li>Startup</li>
+                            <li>Boot Priority ou algo parecido</li>
+                        </ul>
+                    </li>
+                    <li>Nessa parte, você verá uma lista com:
+                        <ul>
+                            <li>HD</li>
+                            <li>USB (pendrive)</li>
+                            <li>DVD, etc.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p>🛠️ Use as setas do teclado para colocar o pendrive no topo da lista (como prioridade de boot).</p>
+                <p>Depois, salve e saia:</p>
+                <p>A maioria das BIOS usa F10 para isso.</p>
+                <p>💡 Agora, ao reiniciar, o computador deve começar a partir do pendrive.</p>
+            </section>
+
+            <section>
+                <h2>❗ Sessão de Erros Comuns e Como Resolver</h2>
+                <div class="step">
+                    <h3>❌ O pendrive não aparece como opção de boot</h3>
+                    <p>O que pode ser:</p>
+                    <ul>
+                        <li>O pendrive não foi criado corretamente (refaça com o Rufus).</li>
+                        <li>A porta USB está com problema (teste em outra).</li>
+                        <li>O pendrive foi colocado depois que o PC já tinha ligado — reinicie com ele já conectado.</li>
+                        <li>A opção "Boot por USB" está desativada na BIOS.</li>
+                    </ul>
+                    <p>🔧 Soluções:</p>
+                    <ul>
+                        <li>Recrie o pendrive com outro programa (ex: Balena Etcher).</li>
+                        <li>Ative a opção "USB Boot" na BIOS.</li>
+                        <li>Desative o Secure Boot, que bloqueia pendrives em alguns computadores modernos.</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3>❌ Aparece a mensagem: "No Bootable Device"</h3>
+                    <p>Isso significa que o computador não achou nada para iniciar.</p>
+                    <p>Pode ser que:</p>
+                    <ul>
+                        <li>A ISO esteja com erro ou incompleta.</li>
+                        <li>O modo de instalação (MBR/UEFI) não seja compatível com seu computador.</li>
+                    </ul>
+                    <p>🔧 Tente:</p>
+                    <ul>
+                        <li>Baixar outra ISO.</li>
+                        <li>No Rufus, escolher outro esquema de partição (MBR para BIOS antigas, GPT para UEFI modernas).</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h3>❌ O pendrive ficou "invisível" no Windows depois de usá-lo para boot</h3>
+                    <p>Alguns programas transformam o pendrive em um formato especial, e o Windows não reconhece mais como armazenamento comum.</p>
+                    <p>🔧 Basta formatar o pendrive novamente pelo Windows para usá-lo normalmente.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

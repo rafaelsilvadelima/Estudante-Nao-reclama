@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compartilhar Pastas na Rede - Blog Educacional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: #333;
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        .tip {
+            background: #e7f5ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid #007bff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Guia Prático: Compartilhar e Acessar Pastas na Rede (Windows)</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>📁 Parte 1 – Como Criar uma Pasta Compartilhada</h2>
+            
+            <h3>🗂️ 1. Escolha ou crie a pasta que deseja compartilhar</h3>
+            <ul>
+                <li>Vá até o local onde deseja criar ou usar uma pasta</li>
+                <li>Clique com o botão direito na pasta e selecione "Propriedades"</li>
+            </ul>
+
+            <h3>🌐 2. Ativar o compartilhamento simples</h3>
+            <ol>
+                <li>Na janela de propriedades, vá até a aba "Compartilhamento"</li>
+                <li>Clique em "Compartilhar..."</li>
+                <li>Na nova janela:
+                    <ul>
+                        <li>Escolha o usuário "Todos" e clique em "Adicionar"</li>
+                        <li>Defina a permissão desejada:
+                            <ul>
+                                <li>Leitura: o outro computador só poderá ver os arquivos</li>
+                                <li>Leitura/Gravação: o outro computador poderá ver, criar, editar ou excluir arquivos</li>
+                            </ul>
+                        </li>
+                        <li>Clique em "Compartilhar" e depois em "Concluído"</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>⚙️ 3. Compartilhamento Avançado (opcional)</h3>
+            <ol>
+                <li>Ainda na aba "Compartilhamento", clique em "Compartilhamento Avançado..."</li>
+                <li>Marque a opção "Compartilhar esta pasta"</li>
+                <li>Clique em "Permissões" para personalizar o acesso por usuário</li>
+                <li>Confirme clicando em "OK"</li>
+            </ol>
+
+            <h3>🌍 4. Descubra o IP do computador (para acessar depois)</h3>
+            <ol>
+                <li>Pressione Windows + R, digite cmd e pressione Enter</li>
+                <li>Digite ipconfig no terminal e pressione Enter</li>
+                <li>Anote o valor do IPv4 (exemplo: 192.168.0.100)</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🔗 Parte 2 – Como Mapear a Pasta Compartilhada em Outro Computador</h2>
+            
+            <h3>🧭 Passo a Passo:</h3>
+            <ol>
+                <li>Abra o Explorador de Arquivos (atalho: Windows + E)</li>
+                <li>Clique em "Este Computador" no painel lateral</li>
+                <li>Vá até a aba "Computador" no topo e clique em "Conectar unidade de rede"</li>
+                <li>Escolha uma letra para a unidade (ex: Z:)</li>
+                <li>No campo Pasta, digite um dos caminhos:</li>
+            </ol>
+
+            <div class="code-block">
+                \\NOME-DO-COMPUTADOR\PastaCompartilhada
+                <br>ou<br>
+                \\192.168.0.100\PastaCompartilhada
+            </div>
+
+            <ol start="6">
+                <li>Marque a opção "Reconectar na entrada" (para o Windows lembrar disso sempre que ligar)</li>
+                <li>Clique em "Concluir"</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Parte 3 – Como Acessar Diretamente pelo Caminho de Rede</h2>
+            
+            <h3>📥 Acesso rápido pelo IP:</h3>
+            <ol>
+                <li>Pressione Windows + R</li>
+                <li>Digite o caminho da pasta, como no exemplo abaixo:</li>
+            </ol>
+
+            <div class="code-block">\\192.168.0.100\PastaCompartilhada</div>
+
+            <ol start="3">
+                <li>Pressione Enter</li>
+                <li>Caso seja solicitado, insira o usuário e a senha do computador que compartilhou a pasta</li>
+            </ol>
+
+            <div class="tip">
+                <h3>🔒 Dicas de Segurança</h3>
+                <ul>
+                    <li>Evite compartilhar com o usuário "Todos" em redes públicas</li>
+                    <li>Crie um usuário específico com senha, caso esteja em ambiente profissional ou deseje mais segurança</li>
+                    <li>Verifique as permissões com cuidado, principalmente se for uma pasta com arquivos importantes</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima.. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
