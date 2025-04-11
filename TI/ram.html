@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memória RAM - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>🔋 Memória RAM</h1>
+        <p>Guia Didático: O Que é Memória RAM e Como Escolher a Ideal</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>1. 🧠 O que é memória RAM?</h2>
+            <p>RAM significa Memória de Acesso Aleatório (Random Access Memory).</p>
+            <p>Ela é uma memória temporária usada pelo computador enquanto ele está ligado.</p>
+            <p>Pense nela como a mesa de trabalho de um escritório:
+quanto maior a mesa, mais coisas você consegue deixar acessíveis ao mesmo tempo.</p>
+            <p>Quando você abre um programa, assiste a um vídeo ou joga, os dados são colocados na RAM para que o processador acesse mais rápido do que se estivesse direto no HD/SSD.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 📌 O que acontece quando falta RAM?</h2>
+            <p>Se você abrir muitos programas ao mesmo tempo e não tiver RAM suficiente, o sistema:</p>
+            <ul>
+                <li>Fica lento</li>
+                <li>Pode congelar ou travar</li>
+                <li>Começa a usar o HD como apoio (isso é o "arquivo de paginação"), o que é muito mais lento</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. 🧬 Características importantes da RAM</h2>
+            <p>Vamos entender os termos mais comuns que aparecem ao escolher uma memória RAM:</p>
+
+            <h3>3.1 – Capacidade (em GB)</h3>
+            <p>É a quantidade de espaço temporário que a RAM oferece.</p>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Quantidade</th>
+                        <th>Uso ideal</th>
+                    </tr>
+                    <tr>
+                        <td>4 GB</td>
+                        <td>Tarefas básicas (navegar, Word, e-mails)</td>
+                    </tr>
+                    <tr>
+                        <td>8 GB</td>
+                        <td>Uso cotidiano, multitarefa leve</td>
+                    </tr>
+                    <tr>
+                        <td>16 GB</td>
+                        <td>Jogos, edição leve, multitarefa</td>
+                    </tr>
+                    <tr>
+                        <td>32 GB+</td>
+                        <td>Edição pesada, engenharia, multitarefa pro</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>3.2 – Tipo de RAM (DDR3, DDR4, DDR5...)</h3>
+            <p>Cada geração de RAM é diferente fisicamente e eletricamente.</p>
+            <ul>
+                <li>DDR3: mais antiga, lenta e comum em PCs antigos.</li>
+                <li>DDR4: padrão atual da maioria dos computadores.</li>
+                <li>DDR5: mais recente, mais rápida, usada em PCs modernos.</li>
+            </ul>
+            <p>Você não pode misturar gerações diferentes. A sua placa-mãe só aceita um tipo!</p>
+
+            <h3>3.3 – Frequência (MHz)</h3>
+            <p>É a velocidade com que a RAM se comunica com o processador.</p>
+            <p>Quanto mais MHz, mais dados por segundo são transmitidos.</p>
+            <p>Exemplo: 2400MHz, 2666MHz, 3200MHz, 3600MHz, etc.</p>
+            <p>Mas atenção:</p>
+            <ul>
+                <li>A frequência deve ser compatível com o que sua placa-mãe e processador suportam.</li>
+                <li>Colocar uma RAM muito rápida num sistema que não suporta não trará benefício.</li>
+            </ul>
+
+            <h3>3.4 – Latência (CL – CAS Latency)</h3>
+            <p>É o tempo de resposta da RAM (em ciclos).</p>
+            <p>Geralmente é representado como CL16, CL18, CL22...</p>
+            <p>Quanto menor o número, mais rápida é a resposta.</p>
+            <p>Porém, a diferença é pequena para uso comum.</p>
+
+            <h3>3.5 – Voltagem</h3>
+            <p>É a quantidade de energia que a RAM consome.</p>
+            <p>A maioria das placas atuais usa 1.2V ou 1.35V para DDR4.</p>
+            <p>RAMs com voltagem errada podem nem funcionar.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. 💡 Como escolher a memória RAM certa?</h2>
+            <h3>Passo 1: Verifique qual tipo de RAM sua placa-mãe suporta</h3>
+            <ul>
+                <li>DDR3, DDR4 ou DDR5?</li>
+                <li>Qual a frequência máxima suportada?</li>
+                <li>Quantos slots de RAM ela tem?</li>
+                <li>Qual o limite de GB total que ela suporta?</li>
+            </ul>
+
+            <h3>Passo 2: Veja o que você precisa</h3>
+            <ul>
+                <li>Vai estudar e navegar? 8 GB está ótimo.</li>
+                <li>Vai jogar e trabalhar? 16 GB é ideal.</li>
+                <li>Vai editar vídeos, fazer 3D ou engenharia? 32 GB ou mais.</li>
+            </ul>
+
+            <h3>Passo 3: Atenção à compatibilidade</h3>
+            <ul>
+                <li>RAM de notebook é diferente da RAM de desktop (tamanho físico).</li>
+                <li>Sempre compre RAMs iguais (mesmo modelo, mesma frequência) se for usar dois pentes juntos.</li>
+                <li>Se for usar 2 ou mais pentes, veja se sua placa-mãe suporta o modo dual-channel (acelera o desempenho).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 🧠 O que é "Dual Channel"? (Explicação com analogia)</h2>
+            <p>Imagine que o processador precisa pegar informações da memória RAM, como se estivesse transportando caixas por uma estrada.</p>
+            <p>Com um único pente de RAM, é como se ele usasse uma pista só para levar os dados.</p>
+            <p>Com dois pentes iguais funcionando em Dual Channel, é como se ele tivesse duas pistas paralelas — ele pode transportar o dobro de dados ao mesmo tempo!</p>
+            <p>Dual Channel é um recurso que permite que dois pentes de RAM idênticos (mesmo modelo, capacidade e frequência) trabalhem em conjunto, aumentando a velocidade de troca de dados com o processador.</p>
+            <h3>✅ Para aproveitar o Dual Channel corretamente:</h3>
+            <ul>
+                <li>Use dois pentes de RAM iguais (mesma marca, tamanho e velocidade).</li>
+                <li>Instale os pentes nos slots corretos da placa-mãe (geralmente nos encaixes alternados, como 1 e 3 ou 2 e 4).</li>
+                <li>As placas-mãe costumam ter os slots coloridos ou numerados para indicar isso.</li>
+                <li>Consulte o manual da sua placa-mãe para saber o pareamento certo.</li>
+            </ul>
+            <h3>📈 Vale a pena usar?</h3>
+            <p>Sim! Usar dois pentes em Dual Channel costuma trazer:</p>
+            <ul>
+                <li>Melhor desempenho em jogos</li>
+                <li>Mais agilidade no uso de programas</li>
+                <li>Uso mais eficiente da memória</li>
+            </ul>
+            <p>É uma forma simples e barata de aumentar o desempenho geral do computador, sem trocar processador ou placa de vídeo.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. 🧠 Curiosidades e dicas</h2>
+            <ul>
+                <li>A RAM não armazena nada permanentemente. Ao desligar o PC, ela se "esvazia".</li>
+                <li>Instalar mais RAM não aumenta a velocidade da internet.</li>
+                <li>RAM não substitui o processador ou a placa de vídeo — ela ajuda a aliviar o trabalho.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. ✅ Resumo: o que olhar ao comprar RAM?</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>O que verificar</th>
+                    </tr>
+                    <tr>
+                        <td>Tipo</td>
+                        <td>DDR3, DDR4, DDR5</td>
+                    </tr>
+                    <tr>
+                        <td>Frequência</td>
+                        <td>2400MHz, 2666MHz, 3200MHz, etc.</td>
+                    </tr>
+                    <tr>
+                        <td>Capacidade</td>
+                        <td>4GB, 8GB, 16GB...</td>
+                    </tr>
+                    <tr>
+                        <td>Compatibilidade</td>
+                        <td>Placa-mãe e processador suportam?</td>
+                    </tr>
+                    <tr>
+                        <td>Dual Channel</td>
+                        <td>Vale a pena usar pares?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

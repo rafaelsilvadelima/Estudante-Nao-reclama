@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitetura de Hardware - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:before {
+            content: '•';
+            color: var(--primary-orange);
+            position: absolute;
+            left: 0;
+        }
+
+        .component-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .component-table th,
+        .component-table td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .component-table th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Guia Didático: Arquitetura Básica de Hardware</h1>
+        <p>O Que é Essencial em um Computador?</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🧠 Por que entender isso?</h2>
+            <p>Saber quais são as peças básicas de um computador e o que cada uma faz é importante mesmo que você não queira ser técnico.</p>
+            <p>Com esse conhecimento, você pode:</p>
+            <ul>
+                <li>Entender melhor quando o PC dá problema</li>
+                <li>Saber o que está comprando (ou montando)</li>
+                <li>Escolher melhor os componentes para o seu uso</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ O que é "hardware"?</h2>
+            <p>Hardware é tudo que você pode tocar no computador — ou seja, as peças físicas.</p>
+            <p>É diferente do software, que são os programas (como o navegador, o Word, os jogos, etc).</p>
+            <p>Podemos dizer que o hardware é o "corpo" e o software é o "cérebro pensante".</p>
+        </div>
+
+        <div class="section">
+            <h2>🧩 Peças essenciais para o computador funcionar</h2>
+            <p>A seguir, vamos ver as peças que realmente são necessárias para o computador ligar e funcionar. Sem elas, o PC nem liga.</p>
+
+            <h3>1. 🧠 Placa-mãe (Motherboard)</h3>
+            <p>A placa-mãe é a peça principal de um computador, funcionando como a base de tudo.</p>
+            <ul>
+                <li>É nela que todas as outras peças se conectam: processador (CPU), memória RAM, armazenamento (HD/SSD), fonte de energia e placas adicionais</li>
+                <li>Funciona como o "sistema de ruas e avenidas" de uma cidade: conecta todos os "prédios" (peças) e permite a comunicação entre eles</li>
+                <li>É responsável por levar energia da fonte para as outras peças</li>
+                <li>Conduz dados entre o processador, a RAM, o HD e os demais componentes</li>
+            </ul>
+
+            <h4>Componentes importantes da placa-mãe:</h4>
+
+            <p><strong>1. Chipset</strong></p>
+            <p>O chipset é um conjunto de circuitos que controla o funcionamento das conexões. Antigamente era dividido em:</p>
+            <table class="component-table">
+                <tr>
+                    <th>Parte</th>
+                    <th>Função</th>
+                </tr>
+                <tr>
+                    <td>Ponte Norte</td>
+                    <td>Conectava o processador com a RAM e a placa de vídeo</td>
+                </tr>
+                <tr>
+                    <td>Ponte Sul</td>
+                    <td>Lidava com portas USB, HDs, áudio, rede, etc</td>
+                </tr>
+            </table>
+            <p>Hoje, muitas funções estão dentro do próprio processador, mas o chipset ainda define os recursos da placa-mãe.</p>
+
+            <p><strong>2. Soquete do processador</strong></p>
+            <ul>
+                <li>É o encaixe onde o processador é instalado</li>
+                <li>Cada tipo de processador só encaixa em um tipo específico de soquete</li>
+                <li>Exemplos: Intel LGA 1200, LGA 1700; AMD AM4</li>
+            </ul>
+
+            <p><strong>3. Slots de memória RAM</strong></p>
+            <ul>
+                <li>São os encaixes para os pentes de RAM</li>
+                <li>A placa-mãe aceita apenas um tipo específico de RAM (DDR3, DDR4 ou DDR5)</li>
+                <li>RAMs de gerações diferentes não são compatíveis</li>
+            </ul>
+
+            <p><strong>4. Portas e conexões</strong></p>
+            <ul>
+                <li>SATA: para HDs e SSDs tradicionais</li>
+                <li>M.2 NVMe: para SSDs mais modernos e rápidos</li>
+                <li>USB: para mouse, teclado, pendrive etc</li>
+                <li>PCI-Express (PCIe): para placas de vídeo ou expansão</li>
+                <li>Rede (Ethernet): para internet com cabo</li>
+                <li>Áudio: para fone, microfone e caixas de som</li>
+            </ul>
+
+            <h4>BIOS e POST: O início de tudo</h4>
+            <p>A BIOS (Basic Input/Output System) é o sistema básico de controle da placa-mãe que:</p>
+            <ul>
+                <li>Funciona como um "porteiro": verifica se tudo está certo antes de iniciar o sistema</li>
+                <li>Realiza o POST (Power-On Self-Test) ao ligar o computador</li>
+                <li>Verifica a presença do processador, memória RAM, teclado e disco com sistema operacional</li>
+                <li>Pode emitir bipes ou piscar LEDs como forma de aviso se algo estiver errado</li>
+            </ul>
+
+            <h4>Como escolher uma placa-mãe?</h4>
+            <p>Siga estes passos:</p>
+            <ul>
+                <li>Verifique o soquete compatível com seu processador</li>
+                <li>Confirme o tipo de memória RAM suportada (DDR3, DDR4, DDR5)</li>
+                <li>Verifique as conexões necessárias (USB, SATA, M.2, etc)</li>
+                <li>Considere possibilidades de upgrade futuro</li>
+                <li>Escolha de acordo com seu objetivo: estudos, trabalho, jogos, etc</li>
+            </ul>
+
+            <h3>2. Processador (CPU)</h3>
+            <p>O cérebro do computador.</p>
+            <ul>
+                <li>A CPU é o comando central: ela pensa, calcula e executa todas as tarefas</li>
+                <li>Sem o processador, o computador não tem como funcionar — é como um corpo sem cérebro</li>
+                <li>Exemplos de marcas: Intel, AMD</li>
+            </ul>
+
+            <h3>3. Memória RAM</h3>
+            <p>A memória de curto prazo.</p>
+            <ul>
+                <li>A RAM é como o bloco de anotações temporário do computador</li>
+                <li>Ela guarda dados só enquanto o computador está ligado, para que ele acesse as informações com rapidez</li>
+                <li>Sem RAM, o computador não consegue trabalhar, pois não tem onde "segurar" os dados enquanto executa programas</li>
+            </ul>
+
+            <h3>4. Armazenamento (HD ou SSD)</h3>
+            <p>A memória de longo prazo.</p>
+            <ul>
+                <li>Aqui ficam os arquivos, o sistema operacional e os programas, mesmo quando o computador está desligado</li>
+                <li>HD (disco rígido): mais antigo, mais barato, mas mais lento</li>
+                <li>SSD (unidade de estado sólido): mais moderno, mais rápido, e deixa o PC muito mais ágil</li>
+                <li>Sem armazenamento, o computador não tem onde guardar o Windows nem os programas</li>
+            </ul>
+
+            <h3>5. Fonte de alimentação (PSU)</h3>
+            <p>O coração que dá energia.</p>
+            <ul>
+                <li>A fonte converte a energia da tomada para uma forma que o computador consegue usar</li>
+                <li>Ela envia energia para todas as peças do computador de forma controlada e segura</li>
+                <li>Sem ela, o computador simplesmente não liga</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧳 E quanto ao gabinete?</h2>
+            <p>O gabinete é a caixa onde todas essas peças são montadas. Ele não é essencial para o funcionamento do computador, mas:</p>
+            <ul>
+                <li>Protege as peças</li>
+                <li>Organiza os cabos</li>
+                <li>Melhora a ventilação</li>
+            </ul>
+            <p>É opcional, mas muito recomendado.</p>
+        </div>
+
+        <div class="section">
+            <h2>🎮 E a placa de vídeo?</h2>
+            <p>A placa de vídeo é responsável por processar imagens, vídeos e gráficos.</p>
+            <ul>
+                <li>Muitos computadores já vêm com vídeo integrado no processador ou na placa-mãe, e funcionam bem para tarefas do dia a dia (internet, filmes, estudos)</li>
+                <li>A placa de vídeo dedicada é necessária apenas para jogos pesados, edição de vídeo, programas 3D, etc</li>
+                <li>Ou seja, nem todo PC precisa de uma placa de vídeo separada</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧠 Recapitulando – As peças essenciais</h2>
+            <table class="component-table">
+                <tr>
+                    <th>Peça</th>
+                    <th>Função</th>
+                </tr>
+                <tr>
+                    <td>Placa-mãe</td>
+                    <td>Conecta todas as partes, envia energia e dados</td>
+                </tr>
+                <tr>
+                    <td>Processador</td>
+                    <td>Comanda todas as tarefas do computador (o cérebro)</td>
+                </tr>
+                <tr>
+                    <td>Memória RAM</td>
+                    <td>Guarda dados temporários enquanto o PC está ligado</td>
+                </tr>
+                <tr>
+                    <td>Armazenamento</td>
+                    <td>Guarda os arquivos e o sistema mesmo com o PC desligado</td>
+                </tr>
+                <tr>
+                    <td>Fonte</td>
+                    <td>Transforma energia da tomada em energia para as peças</td>
+                </tr>
+            </table>
+            <p>Gabinete e Placa de vídeo são opcionais dependendo do uso.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

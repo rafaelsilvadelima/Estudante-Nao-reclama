@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processador - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>🧠 O Processador (CPU)</h1>
+        <p>Guia Didático: O Que é um Processador e Como Escolher um para o Seu PC</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>1. 🧩 O que é o processador (CPU)?</h2>
+            <p>O processador, também chamado de CPU (Central Processing Unit), é o cérebro do computador.
+É ele quem executa os comandos, faz os cálculos, e processa tudo o que você vê e faz.</p>
+            <p>Abrir um programa, digitar, assistir a um vídeo ou até ligar o computador — tudo passa pela CPU.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. ⚙️ Como o processador funciona</h2>
+            <p>Imagine uma cozinha de restaurante:</p>
+            <ul>
+                <li>O processador é o cozinheiro-chefe.</li>
+                <li>Os programas são os pedidos dos clientes.</li>
+                <li>A RAM é a bancada de preparo, onde os ingredientes ficam prontos pra usar.</li>
+            </ul>
+            <p>O processador pega informações da RAM, processa, e envia o resultado de volta.
+Ele faz isso o tempo todo, milhões de vezes por segundo.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. 🔍 Componentes e características que importam</h2>
+            
+            <h3>3.1 – Núcleos (Cores)</h3>
+            <p>São como mini processadores dentro do processador.</p>
+            <p>Antigamente, o processador fazia tudo sozinho (1 núcleo).
+Hoje, eles vêm com 2, 4, 6, 8 ou mais núcleos, e isso permite fazer várias tarefas ao mesmo tempo.</p>
+            
+            <div class="table-container">
+            <table>
+                <tr>
+                    <th>Núcleos</th>
+                    <th>Ideal para...</th>
+                </tr>
+                <tr>
+                    <td>2 a 4</td>
+                    <td>Navegar, estudar, assistir vídeos</td>
+                </tr>
+                <tr>
+                    <td>6 a 8</td>
+                    <td>Trabalhar, jogar, editar vídeos</td>
+                </tr>
+                <tr>
+                    <td>10 ou mais</td>
+                    <td>Uso profissional, engenharia, 3D, streaming</td>
+                </tr>
+            </table>
+            </div>
+
+            <h3>3.2 – Threads</h3>
+            <p>Uma thread é como uma linha de execução dentro de um núcleo.</p>
+            <p>Alguns processadores usam tecnologia chamada Hyper-Threading ou SMT, que permite que um núcleo funcione como se fossem dois.</p>
+            <p>Exemplo: um processador com 4 núcleos e 8 threads consegue executar 8 tarefas simultâneas.</p>
+
+            <h3>3.3 – Frequência (GHz)</h3>
+            <p>Mede a velocidade com que o processador trabalha.</p>
+            <p>Quanto maior a frequência (em GHz, gigahertz), mais instruções por segundo ele pode processar.</p>
+            <p>Um processador com 3.5 GHz trabalha mais rápido que um com 2.0 GHz, mas isso não é tudo (depende da arquitetura, número de núcleos, etc).</p>
+
+            <h3>3.4 – Cache</h3>
+            <p>É uma memória ultra-rápida que o processador usa para guardar dados temporários.</p>
+            <p>É como um bolso rápido para coisas que ele vai usar em instantes.</p>
+            <p>Existem níveis: L1, L2, L3, e quanto mais cache, melhor (mas não é o fator principal).</p>
+
+            <h3>3.5 – TDP (Thermal Design Power)</h3>
+            <p>É o calor que o processador gera, medido em watts (W).</p>
+            <p>Um TDP mais alto significa mais desempenho, mas também mais aquecimento e consumo de energia.</p>
+            <p>Ideal para escolher um bom cooler (ventoinha) e fonte.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. 🔧 Soquete: o encaixe do processador</h2>
+            <p>Cada processador tem um tipo de soquete, que é o encaixe na placa-mãe.</p>
+            <ul>
+                <li>Intel: LGA 1200, LGA 1700, etc.</li>
+                <li>AMD: AM4, AM5, etc.</li>
+            </ul>
+            <p>Placa-mãe e processador precisam ter o mesmo soquete, senão não encaixam e nem funcionam.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. 🛠️ Como escolher o processador ideal para você?</h2>
+            
+            <h3>Passo 1: Defina seu uso</h3>
+            <div class="table-container">
+            <table>
+                <tr>
+                    <th>Tipo de uso</th>
+                    <th>O que priorizar</th>
+                </tr>
+                <tr>
+                    <td>Estudo / navegação</td>
+                    <td>2 a 4 núcleos, baixo consumo</td>
+                </tr>
+                <tr>
+                    <td>Escritório</td>
+                    <td>4 núcleos, bom custo-benefício</td>
+                </tr>
+                <tr>
+                    <td>Jogos</td>
+                    <td>6 a 8 núcleos, boa frequência</td>
+                </tr>
+                <tr>
+                    <td>Edição / streaming</td>
+                    <td>8 ou mais núcleos, muitas threads</td>
+                </tr>
+                <tr>
+                    <td>Engenharia / 3D</td>
+                    <td>alto número de núcleos e cache</td>
+                </tr>
+            </table>
+            </div>
+
+            <h3>Passo 2: Veja se a placa-mãe é compatível</h3>
+            <ul>
+                <li>Verifique o soquete da placa-mãe.</li>
+                <li>Veja se ela suporta o processador da mesma geração.</li>
+            </ul>
+
+            <h3>Passo 3: Avalie o custo-benefício</h3>
+            <p>Às vezes, um processador com menos GHz, mas mais núcleos, entrega mais desempenho em tarefas pesadas.</p>
+            <p>Veja também se você vai precisar de placa de vídeo dedicada — alguns processadores já têm gráficos integrados (ex: AMD Ryzen G, Intel com UHD Graphics).</p>
+        </div>
+
+        <div class="section">
+            <h2>6. 🔄 Comparativo entre processadores</h2>
+            <div class="table-container">
+                <table>
+                <tr>
+                    <th>Processador</th>
+                    <th>Núcleos/Threads</th>
+                    <th>Frequência</th>
+                    <th>Ideal para</th>
+                </tr>
+                <tr>
+                    <td>Intel i3 10100</td>
+                    <td>4 / 8</td>
+                    <td>3.6 GHz</td>
+                    <td>Tarefas básicas</td>
+                </tr>
+                <tr>
+                    <td>Ryzen 5 5600G</td>
+                    <td>6 / 12</td>
+                    <td>3.9 GHz</td>
+                    <td>Jogos e produtividade</td>
+                </tr>
+                <tr>
+                    <td>Intel i7 12700KF</td>
+                    <td>12 / 20</td>
+                    <td>3.6 GHz</td>
+                    <td>Edição e multitarefas</td>
+                </tr>
+                <tr>
+                    <td>Ryzen 9 7900X</td>
+                    <td>12 / 24</td>
+                    <td>4.7 GHz</td>
+                    <td>Streaming e 3D pesado</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>7. ✅ Conclusão</h2>
+            <p>O processador é uma das peças mais importantes do computador, e escolher bem depende de:</p>
+            <ul>
+                <li>Saber o que você precisa fazer no PC.</li>
+                <li>Verificar a compatibilidade com a placa-mãe e RAM.</li>
+                <li>Entender os termos como núcleo, thread, GHz, cache e soquete.</li>
+                <li>Equilibrar desempenho com custo.</li>
+            </ul>
+            <p>Não adianta escolher o mais caro se você só vai assistir vídeos e navegar. E também não adianta economizar demais se você precisa de potência.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

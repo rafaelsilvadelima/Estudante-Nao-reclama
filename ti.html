@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T.I - Blog Educacional</title>
     <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,13 +21,14 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            color: var(--text-color);
+            background-color: var(--light-bg);
         }
 
         header {
-            background-color: #333;
+            background-color: var(--primary-blue);
             color: white;
             text-align: center;
             padding: 2rem;
@@ -48,7 +58,7 @@
         }
 
         .accordion-header {
-            background: #007bff;
+            background: var(--secondary-blue);
             color: white;
             padding: 1rem;
             cursor: pointer;
@@ -59,7 +69,7 @@
         }
 
         .accordion-header:hover {
-            background: #0056b3;
+            background: var(--primary-blue);
         }
 
         .accordion-content {
@@ -69,7 +79,7 @@
         }
 
         .accordion-content.active {
-            max-height: 1000px;
+            max-height: 2000px;
         }
 
         .article-list {
@@ -86,17 +96,17 @@
         }
 
         .article-item h3 {
-            color: #333;
+            color: var(--primary-blue);
             margin-bottom: 0.5rem;
         }
 
         .article-item p {
-            color: #666;
+            color: var(--text-color);
             margin-bottom: 0.5rem;
         }
 
         .read-more {
-            color: #007bff;
+            color: var(--secondary-blue);
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
@@ -108,7 +118,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: var(--primary-blue);
             color: white;
             text-align: center;
             padding: 1.5rem;
@@ -146,7 +156,7 @@
     </header>
 
     <main>
-        <!-- <div class="accordion-section">
+        <div class="accordion-section">
             <div class="accordion-header">
                 <h2>Arquitetura Básica</h2>
                 <span class="accordion-icon">▼</span>
@@ -156,16 +166,31 @@
                     <div class="article-item">
                         <h3>Hardware e Componentes</h3>
                         <p>Conheça os principais componentes de um computador e suas funções.</p>
-                        <a href="#" class="read-more">Em Breve →</a>
+                        <a href="TI/arquitetura-hardware.html" class="read-more">Ver Mais →</a>
                     </div>
                     <div class="article-item">
-                        <h3>Sistemas Operacionais</h3>
-                        <p>Aprenda sobre os diferentes sistemas operacionais e suas características.</p>
-                        <a href="#" class="read-more">Em Breve  →</a>
+                        <h3>Placa-Mãe: O Coração do Computador</h3>
+                        <p>Guia completo sobre a placa-mãe e como escolher a ideal para seu PC.</p>
+                        <a href="TI/placa-mae.html" class="read-more">Ver Mais →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Processador: O Cérebro do Computador</h3>
+                        <p>Guia didático sobre o que é um processador e como escolher o ideal para seu PC.</p>
+                        <a href="TI/processador.html" class="read-more">Ver Mais →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Memória RAM: A Memória Principal</h3>
+                        <p>Guia didático sobre o que é memória RAM e como escolher a ideal para seu PC.</p>
+                        <a href="TI/ram.html" class="read-more">Ver Mais →</a>
+                    </div>
+                    <div class="article-item">
+                        <h3>Armazenamento: A Memória Permanente</h3>
+                        <p>Guia completo sobre HD, SSD, NVMe e outros tipos de armazenamento para seu computador.</p>
+                        <a href="TI/armazenamento.html" class="read-more">Ver Mais →</a>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <div class="accordion-section">
             <div class="accordion-header">

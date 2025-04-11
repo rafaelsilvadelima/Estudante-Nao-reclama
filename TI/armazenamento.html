@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenamento - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>💾 Armazenamento</h1>
+        <p>Guia Didático: Armazenamento de Dados – HD, SSD, NVMe, Flash e ROM</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>1. 📦 O que é armazenamento?</h2>
+            <p>Armazenamento é onde o computador guarda todos os dados:
+sistema operacional (como o Windows), programas, jogos, documentos, fotos, vídeos...</p>
+            <p>Pense no armazenamento como o armário da sua casa.
+É onde você guarda tudo — mesmo quando o computador está desligado.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 🧱 Tipos principais de armazenamento interno</h2>
+            <p>Vamos conhecer os três formatos mais comuns dentro do computador:</p>
+
+            <h3>2.1 – HD (Disco Rígido)</h3>
+            <p>O mais tradicional e barato</p>
+            <ul>
+                <li>Possui discos físicos que giram, como um toca-discos.</li>
+                <li>Uma agulha lê os dados enquanto o disco gira.</li>
+                <li>Tem grande capacidade (1 TB, 2 TB ou mais) e baixo custo.</li>
+                <li>Mais lento para abrir programas ou iniciar o sistema.</li>
+                <li>Ideal para: guardar arquivos grandes (vídeos, fotos, backups).</li>
+            </ul>
+
+            <h3>2.2 – SSD (Unidade de Estado Sólido)</h3>
+            <p>Mais rápido, moderno e sem partes móveis</p>
+            <ul>
+                <li>Usa memória eletrônica (flash) — como um pendrive gigante e veloz.</li>
+                <li>É até 10x mais rápido que o HD.</li>
+                <li>Não faz barulho, não vibra, e consome menos energia.</li>
+                <li>Mais caro por GB do que o HD, mas muito mais rápido.</li>
+                <li>Ideal para: instalar o sistema operacional, programas e jogos — melhora muito o desempenho geral do PC.</li>
+            </ul>
+
+            <h3>2.3 – NVMe M.2</h3>
+            <p>O formato mais moderno e rápido</p>
+            <ul>
+                <li>Também é um tipo de SSD, mas usa um encaixe diferente (M.2) e a tecnologia NVMe, muito mais rápida.</li>
+                <li>Parece um pente de RAM fino, e é instalado direto na placa-mãe.</li>
+                <li>Velocidade de leitura/escrita até 6x maior que SSDs comuns.</li>
+                <li>Ideal para: quem busca velocidade máxima, como em jogos, edição de vídeo, projetos 3D, etc.</li>
+            </ul>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Velocidade</th>
+                        <th>Preço</th>
+                        <th>Capacidade</th>
+                        <th>Ideal para...</th>
+                    </tr>
+                    <tr>
+                        <td>HD</td>
+                        <td>Lenta</td>
+                        <td>Mais barato</td>
+                        <td>Alta</td>
+                        <td>Guardar arquivos grandes</td>
+                    </tr>
+                    <tr>
+                        <td>SSD</td>
+                        <td>Rápida</td>
+                        <td>Médio</td>
+                        <td>Média</td>
+                        <td>Sistema, programas, uso geral</td>
+                    </tr>
+                    <tr>
+                        <td>NVMe</td>
+                        <td>Muito rápida</td>
+                        <td>Mais caro</td>
+                        <td>Média</td>
+                        <td>Desempenho máximo, multitarefa</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. ⚡ Memória Flash – Armazenamento portátil</h2>
+            <p>Memória flash é um tipo de memória que guarda os dados mesmo sem energia.
+É usada em dispositivos portáteis e removíveis:</p>
+
+            <h3>3.1 – Pendrive</h3>
+            <ul>
+                <li>Pequeno, portátil e fácil de usar.</li>
+                <li>Ótimo para transportar arquivos entre computadores.</li>
+                <li>Pode ser usado para criar pendrives bootáveis (como vimos em outro guia).</li>
+            </ul>
+
+            <h3>3.2 – Cartão de memória (SD, microSD)</h3>
+            <ul>
+                <li>Usado em celulares, câmeras, tablets e drones.</li>
+                <li>Também funciona com memória flash.</li>
+                <li>Quanto maior a classe (ex: Class 10, UHS-I), maior a velocidade de leitura e gravação.</li>
+            </ul>
+
+            <p>Ambos funcionam de forma semelhante a um SSD, mas em escala menor, com foco em portabilidade.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. 🔒 O que é memória ROM?</h2>
+            <p>ROM significa Read-Only Memory (memória somente leitura).</p>
+            <p>Ela é usada para guardar instruções fixas, que não mudam, como a BIOS da placa-mãe.</p>
+
+            <h3>Características:</h3>
+            <ul>
+                <li>Vem gravada de fábrica.</li>
+                <li>O conteúdo não é apagado mesmo sem energia.</li>
+                <li>É usada para instruções básicas de inicialização do computador (como ligar o sistema).</li>
+            </ul>
+
+            <p>Pense na ROM como um manual de instruções embutido no computador — ele usa essas informações para saber como iniciar.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. 💡 Como escolher o armazenamento ideal para mim?</h2>
+            <p>Pergunte a si mesmo:</p>
+            <ul>
+                <li>Você quer velocidade ou capacidade barata?</li>
+                <li>Vai usar o computador para tarefas simples, jogos ou trabalho pesado?</li>
+                <li>Precisa de armazenamento interno (dentro do PC) ou portátil (levar para outros lugares)?</li>
+            </ul>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Uso</th>
+                        <th>Melhor escolha</th>
+                    </tr>
+                    <tr>
+                        <td>Navegar e estudar</td>
+                        <td>SSD de 240 GB ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Jogos</td>
+                        <td>SSD ou NVMe para sistema + HD para jogos</td>
+                    </tr>
+                    <tr>
+                        <td>Edição e projetos</td>
+                        <td>NVMe para velocidade + HD para backup</td>
+                    </tr>
+                    <tr>
+                        <td>Guardar muitos arquivos</td>
+                        <td>HD de 1 TB ou mais</td>
+                    </tr>
+                    <tr>
+                        <td>Portabilidade</td>
+                        <td>Pendrive ou cartão de memória rápidos</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>6. ✅ Conclusão</h2>
+            <p>Você não precisa ser técnico para entender que:</p>
+            <ul>
+                <li>O HD é mais barato, mas mais lento.</li>
+                <li>O SSD acelera muito o computador.</li>
+                <li>O NVMe é ainda mais rápido, ideal para quem precisa de desempenho máximo.</li>
+                <li>Pendrives e cartões são ótimos para transporte e backups.</li>
+                <li>A ROM é uma parte interna do sistema, que guarda instruções fixas.</li>
+            </ul>
+            <p>Saber essas diferenças te ajuda a escolher bem, evitar problemas de desempenho e montar um computador adequado para o que você precisa.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
