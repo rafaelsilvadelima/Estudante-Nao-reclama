@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurando e Atualizando o BIOS - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Restaurando e Atualizando o BIOS</h1>
+        <p>Guia Completo para Iniciantes</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🎯 Objetivo da Aula</h2>
+            <p>Ensinar, de forma clara e segura, como restaurar e atualizar o BIOS de uma placa-mãe, explicando o que é BIOS, por que e quando fazer isso, quais os riscos, os métodos existentes e os passos necessários em cada um.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. 🧠 O que é BIOS?</h2>
+            <p>BIOS significa Basic Input/Output System (Sistema Básico de Entrada/Saída).</p>
+            <p>É um software interno da placa-mãe, armazenado num chip, que inicia o computador e gerencia os componentes de hardware antes do sistema operacional ser carregado.</p>
+            <p>A versão moderna do BIOS se chama UEFI (Unified Extensible Firmware Interface), mas a função é a mesma.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 🧩 Para que serve o BIOS?</h2>
+            <ul>
+                <li>Fazer o POST (Power-On Self-Test), que testa se os componentes estão funcionando.</li>
+                <li>Reconhecer e configurar discos, memória, processador e outros dispositivos.</li>
+                <li>Permitir ajustes finos como ordem de boot, overclock, etc.</li>
+                <li>Carregar o sistema operacional do disco ou pendrive.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. ⚠️ Quando restaurar ou atualizar o BIOS?</h2>
+            
+            <h3>✅ Atualizar BIOS quando:</h3>
+            <ul>
+                <li>Você vai instalar um processador novo e a placa-mãe ainda não reconhece.</li>
+                <li>Existem erros corrigidos na nova versão.</li>
+                <li>A fabricante recomenda para melhor compatibilidade ou desempenho.</li>
+                <li>Problemas de inicialização ou travamentos constantes são relatados.</li>
+            </ul>
+
+            <h3>⚠️ Restaurar (resetar) BIOS quando:</h3>
+            <ul>
+                <li>Fez configurações erradas no setup e o PC não liga mais.</li>
+                <li>O sistema está instável após modificações.</li>
+                <li>Quer voltar ao padrão de fábrica.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 🛠️ Riscos e Cuidados</h2>
+            <ul>
+                <li>Nunca desligue o PC durante uma atualização de BIOS! Isso pode corromper a placa-mãe.</li>
+                <li>Sempre baixe o arquivo correto para o modelo exato da placa-mãe.</li>
+                <li>Use nobreak ou garanta energia estável durante o processo.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 📋 Como Restaurar o BIOS</h2>
+            
+            <h3>Método 1 – Resetar via Setup (se o PC liga)</h3>
+            <ol>
+                <li>Ligue o computador e pressione a tecla para entrar no setup (geralmente Del, F2 ou Esc).</li>
+                <li>Vá até a opção:
+                    <ul>
+                        <li>Exit > Load Setup Defaults ou</li>
+                        <li>Restore Defaults / Optimized Defaults</li>
+                    </ul>
+                </li>
+                <li>Salve as configurações e saia (F10 normalmente).</li>
+            </ol>
+
+            <h3>Método 2 – Remover a bateria (se não liga ou não acessa setup)</h3>
+            <ol>
+                <li>Desligue o PC e retire o cabo de energia.</li>
+                <li>Abra o gabinete e localize a bateria CR2032 na placa-mãe.</li>
+                <li>Remova a bateria com cuidado e espere 30 segundos.</li>
+                <li>Recoloque a bateria, ligue o PC e teste.</li>
+            </ol>
+
+            <h3>Método 3 – Usar o Jumper CLR_CMOS</h3>
+            <ol>
+                <li>Desligue o PC e retire da tomada.</li>
+                <li>Localize o jumper CLR_CMOS (consulte o manual).</li>
+                <li>Mova o jumper da posição padrão para a de limpeza por 5–10 segundos.</li>
+                <li>Retorne à posição original e ligue o PC.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>6. ⬆️ Como Atualizar o BIOS (Passo a Passo)</h2>
+            
+            <h3>✅ Preparação:</h3>
+            <ul>
+                <li>Descubra o modelo exato da placa-mãe (usando CPU-Z ou olhando na própria placa).</li>
+                <li>Acesse o site da fabricante (Ex: ASUS, Gigabyte, MSI, ASRock).</li>
+                <li>Vá à seção de suporte/downloads e procure a versão mais recente do BIOS.</li>
+            </ul>
+
+            <h3>Método 1 – Atualização via Setup (EZ Flash / M-Flash / Q-Flash)</h3>
+            <p>Recomendado para a maioria das placas modernas.</p>
+            
+            <p>Passo a Passo:</p>
+            <ol>
+                <li>Baixe o arquivo de atualização (.CAP, .ROM, .BIN) no site oficial.</li>
+                <li>Extraia e copie o arquivo para um pendrive formatado em FAT32.</li>
+                <li>Insira o pendrive no PC e reinicie.</li>
+                <li>Acesse o setup da BIOS com Del/F2 e vá até a opção:
+                    <ul>
+                        <li>ASUS – "EZ Flash Utility"</li>
+                        <li>MSI – "M-Flash"</li>
+                        <li>Gigabyte – "Q-Flash"</li>
+                        <li>ASRock – "Instant Flash"</li>
+                    </ul>
+                </li>
+                <li>Escolha o arquivo no pendrive.</li>
+                <li>Inicie a atualização. Não desligue!</li>
+                <li>Ao final, o PC irá reiniciar automaticamente.</li>
+            </ol>
+
+            <h3>Método 2 – Atualização via Windows (BIOS Update Utility)</h3>
+            <ul>
+                <li>Alguns fabricantes oferecem um programa de atualização para Windows.</li>
+                <li>Baixe o utilitário no site da fabricante.</li>
+                <li>Execute como administrador.</li>
+                <li>Selecione o arquivo de BIOS baixado.</li>
+                <li>Clique em atualizar. O PC vai reiniciar e atualizar automaticamente.</li>
+            </ul>
+            <p>⚠️ Cuidado: esse método é mais arriscado, pois depende da estabilidade do Windows.</p>
+
+            <h3>Método 3 – Flashback USB (sem processador ou vídeo)</h3>
+            <p>Apenas para placas-mãe com esse recurso (ex: ASUS BIOS Flashback)</p>
+            <ol>
+                <li>Baixe o BIOS correto e renomeie como exigido pela fabricante (Ex: bios.rom).</li>
+                <li>Copie para pendrive FAT32.</li>
+                <li>Conecte o pendrive na porta específica "BIOS".</li>
+                <li>Pressione o botão BIOS Flashback por 3 segundos.</li>
+                <li>A luz vai piscar durante o processo (leva alguns minutos).</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>7. 🧰 Checklist de Segurança</h2>
+            <ul>
+                <li>✔ Baixei o BIOS certo para o modelo da placa?</li>
+                <li>✔ O pendrive está em FAT32?</li>
+                <li>✔ Estou em local com energia estável?</li>
+                <li>✔ Estou usando um método recomendado pela fabricante?</li>
+                <li>✔ Não vou interromper o processo?</li>
+            </ul>
+        </div>
+    </main>
+
+    <div class="section">
+        <h2>8. 🎥 Vídeo Demonstrativo</h2>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 1rem;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                src="https://www.youtube.com/embed/YVHa46UoM0A" 
+                title="Tutorial de Atualização do BIOS" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

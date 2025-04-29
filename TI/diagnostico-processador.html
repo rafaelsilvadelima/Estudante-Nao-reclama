@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Processadores - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>🔧 Diagnóstico e Solução de Problemas em Processadores</h1>
+        <p>Guia completo para identificar e resolver problemas em CPUs</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>1. 🧠 Conceitos Iniciais</h2>
+            <p>O processador (CPU) é a unidade central de processamento que executa instruções e comanda o funcionamento geral do computador.</p>
+            <p>Principais fabricantes:</p>
+            <ul>
+                <li>Intel e AMD (x86/x64)</li>
+                <li>ARM (dispositivos móveis)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. ⚠️ Erros Mais Comuns em Processadores</h2>
+            
+            <h3>2.1 Aquecimento Excessivo (Overheating)</h3>
+            <p><strong>Causa:</strong> Poeira no dissipador, pasta térmica seca, cooler com falhas, overclock.</p>
+            <p><strong>Sintomas:</strong> Travamentos, desligamentos inesperados, lentidão extrema.</p>
+
+            <h3>2.2 Pinos Dobrados ou Quebrados</h3>
+            <p><strong>Causa:</strong> Manuseio incorreto na instalação ou troca da CPU.</p>
+            <p><strong>Sintomas:</strong> PC não liga, beeps na placa-mãe, nenhum vídeo exibido.</p>
+
+            <h3>2.3 Socket Incompatível</h3>
+            <p><strong>Causa:</strong> CPU não compatível com a placa-mãe.</p>
+            <p><strong>Sintomas:</strong> Sistema não inicia, ausência total de resposta.</p>
+
+            <h3>2.4 Falhas Internas no Silício</h3>
+            <p><strong>Causa:</strong> Defeito de fábrica ou danos por superaquecimento/problemas elétricos.</p>
+            <p><strong>Sintomas:</strong> Erros aleatórios, BSODs frequentes, reinícios sem motivo.</p>
+
+            <h3>2.5 Mau Contato com o Soquete</h3>
+            <p><strong>Causa:</strong> Instalação incorreta, sujeira ou pasta térmica em excesso.</p>
+            <p><strong>Sintomas:</strong> Falha intermitente ao ligar, beeps, desligamentos.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. 🔍 Como Identificar Problemas no Processador</h2>
+            
+            <h3>3.1 Sintomas Comuns</h3>
+            <table>
+                <tr>
+                    <th>Sintoma</th>
+                    <th>Pode ser o processador?</th>
+                </tr>
+                <tr>
+                    <td>PC liga, mas não dá vídeo</td>
+                    <td>✅ Sim</td>
+                </tr>
+                <tr>
+                    <td>Travamentos constantes</td>
+                    <td>✅ Sim</td>
+                </tr>
+                <tr>
+                    <td>Erros de memória</td>
+                    <td>❌ Provavelmente RAM</td>
+                </tr>
+                <tr>
+                    <td>BSOD aleatório com códigos variados</td>
+                    <td>✅ Sim</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="explanation">
+                        <p><strong>O que é BSOD?</strong> Blue Screen of Death (Tela Azul da Morte) é um erro crítico do Windows que ocorre quando o sistema encontra um problema irrecuperável.</p>
+                        <p><strong>Códigos comuns relacionados à CPU:</strong></p>
+                        <ul>
+                            <li>IRQL_NOT_LESS_OR_EQUAL</li>
+                            <li>KERNEL_SECURITY_CHECK_FAILURE</li>
+                            <li>MACHINE_CHECK_EXCEPTION</li>
+                            <li>CLOCK_WATCHDOG_TIMEOUT</li>
+                        </ul>
+                        <p>Quando os códigos variam frequentemente, pode indicar CPU defeituosa, superaquecida ou com mau contato.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cheiro de queimado</td>
+                    <td>✅ Possível</td>
+                </tr>
+            </table>
+
+            <h3>3.2 Beep Codes</h3>
+            <p>Use o manual da placa-mãe para interpretar os sinais sonoros. Alguns significam erro de CPU.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. 🧪 Como Testar o Processador</h2>
+            
+            <h3>4.1 Testes Físicos</h3>
+            <ul>
+                <li><strong>Visual:</strong> Verificar pinos, limpeza, pasta térmica.</li>
+                <li><strong>Substituição cruzada:</strong> Testar o processador em outra placa compatível ou outro processador na mesma placa.</li>
+            </ul>
+
+            <h3>4.2 Testes em Ambiente</h3>
+            <p><strong>Softwares recomendados:</strong></p>
+            <ul>
+                <li>CPU-Z: Identificação do processador</li>
+                <li>HWMonitor/Core Temp: Temperatura da CPU</li>
+                <li>Prime95 / AIDA64 / Intel Burn Test: Testes de estresse</li>
+            </ul>
+            <p>⚠️ <strong>Importante:</strong> Monitore a temperatura. Acima de 90ºC sob carga é crítico.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. 🛠️ Como Resolver Problemas</h2>
+            <table>
+                <tr>
+                    <th>Problema</th>
+                    <th>Solução recomendada</th>
+                </tr>
+                <tr>
+                    <td>Superaquecimento</td>
+                    <td>Limpeza, troca da pasta térmica, novo cooler</td>
+                </tr>
+                <tr>
+                    <td>Pinos tortos</td>
+                    <td>Realinhamento com cuidado (uso de cartão ou pinça de precisão)</td>
+                </tr>
+                <tr>
+                    <td>Incompatibilidade com placa-mãe</td>
+                    <td>Verificar o socket e chipset antes da compra</td>
+                </tr>
+                <tr>
+                    <td>Travamentos constantes</td>
+                    <td>Testar com outro processador; atualizar BIOS</td>
+                </tr>
+                <tr>
+                    <td>CPU sem resposta</td>
+                    <td>Testar outra CPU ou placa-mãe, reset de CMOS</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="explanation">
+                        <p><strong>Sintomas:</strong></p>
+                        <ul>
+                            <li>PC não liga ou liga sem vídeo e sem beep</li>
+                            <li>Ventoinhas giram, mas sistema não inicia</li>
+                        </ul>
+                        <p><strong>Procedimento de Reset CMOS:</strong></p>
+                        <ol>
+                            <li>Desligue o PC da tomada</li>
+                            <li>Remova a bateria da placa-mãe por 10 segundos ou use o jumper de reset</li>
+                            <li>Este processo zera as configurações da BIOS, resolvendo problemas de overclock ou incompatibilidade</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>6. 🧰 Dicas de Boas Práticas</h2>
+            <ul>
+                <li>Sempre usar pulseira antiestática ao manusear a CPU</li>
+                <li>Aplicar pasta térmica na medida certa (grão de arroz)</li>
+                <li>Verificar compatibilidade antes de upgrades</li>
+                <li>Atualizar BIOS apenas se necessário e com precaução</li>
+                <li>Nunca forçar a instalação do processador no soquete</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

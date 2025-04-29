@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Placa-Mãe - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Diagnóstico e Solução de Problemas em Placa-Mãe</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🎯 Objetivo da Aula</h2>
+            <p>Capacitar o aluno a identificar defeitos comuns em placas-mãe, entender os sintomas associados, realizar testes adequados e aplicar soluções eficazes.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. 🧩 O que é a Placa-Mãe?</h2>
+            <p>A placa-mãe (motherboard) é o componente central do computador, responsável por conectar e permitir a comunicação entre todos os outros: processador, memória RAM, HD/SSD, placa de vídeo, etc.</p>
+            <p>Possui circuitos integrados, capacitores, slots, portas de entrada e saída, BIOS/UEFI, entre outros.</p>
+            <p>Danos ou falhas nela podem causar diversos tipos de problemas sistêmicos.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. ⚠️ Erros Mais Comuns em Placa-Mãe</h2>
+            <table>
+                <tr>
+                    <th>Erro ou Sintoma</th>
+                    <th>Possível causa na placa-mãe</th>
+                </tr>
+                <tr>
+                    <td>PC não liga (sem sinal nenhum)</td>
+                    <td>Curto na placa, VRM queimado, defeito geral</td>
+                </tr>
+                <tr>
+                    <td>Liga mas não dá vídeo</td>
+                    <td>Falha de BIOS, slot defeituoso, chipset</td>
+                </tr>
+                <tr>
+                    <td>Beeps longos ou padrão de erro</td>
+                    <td>Problemas com RAM, CPU ou próprios da placa</td>
+                </tr>
+                <tr>
+                    <td>Portas USB ou SATA sem funcionar</td>
+                    <td>Circuito danificado</td>
+                </tr>
+                <tr>
+                    <td>Superaquecimento repentino</td>
+                    <td>Sensor da placa com defeito ou VRM com falha</td>
+                </tr>
+                <tr>
+                    <td>Problemas aleatórios com periféricos</td>
+                    <td>Controlador de I/O danificado</td>
+                </tr>
+                <tr>
+                    <td>Travamentos intermitentes</td>
+                    <td>Capacitores estufados ou trilhas danificadas</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>3. 🔍 Como Identificar Problemas na Placa-Mãe</h2>
+            
+            <h3>3.1 Sinais Visuais</h3>
+            <ul>
+                <li>Capacitores estufados ou vazando</li>
+                <li>Trincas na placa</li>
+                <li>Componentes queimados ou escurecidos</li>
+                <li>Conectores frouxos ou danificados</li>
+            </ul>
+
+            <h3>3.2 Sintomas comportamentais</h3>
+            <ul>
+                <li>Falta de resposta mesmo com fonte testada</li>
+                <li>Erros de POST (Power-On Self-Test)</li>
+                <li>CMOS que perde configurações constantemente</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 🧪 Como Testar a Placa-Mãe</h2>
+            
+            <h3>4.1 Teste de bancada (mínimo sistema)</h3>
+            <p>Monte fora do gabinete com os mínimos componentes:</p>
+            
+            <table>
+                <tr>
+                    <th>Item</th>
+                    <th>Finalidade</th>
+                </tr>
+                <tr>
+                    <td>Placa-mãe</td>
+                    <td>Teste do circuito principal</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td>Teste de compatibilidade e POST</td>
+                </tr>
+                <tr>
+                    <td>1 pente de RAM</td>
+                    <td>Verificar leitura de memória</td>
+                </tr>
+                <tr>
+                    <td>Fonte funcional</td>
+                    <td>Alimentar o sistema</td>
+                </tr>
+                <tr>
+                    <td>Placa de vídeo (se necessário)</td>
+                    <td>Para vídeo em placas sem onboard</td>
+                </tr>
+            </table>
+
+            <p>→ Liga e dá vídeo? Ótimo sinal.</p>
+            <p>→ Liga mas sem vídeo ou sem beeps? Provável problema na placa.</p>
+
+            <h3>4.2 Beep Codes (Códigos sonoros)</h3>
+            <p>Consulte o manual da placa.</p>
+            <p>Exemplos comuns:</p>
+            <ul>
+                <li>1 beep longo e 2 curtos – Erro de vídeo</li>
+                <li>Sem beeps – Possível falha grave na placa-mãe</li>
+            </ul>
+
+            <h3>4.3 Testes com Multímetro</h3>
+            <ul>
+                <li>Verificar tensões nos pinos da fonte ATX (24 pinos)</li>
+                <li>Testar continuidade de circuitos (avançado)</li>
+            </ul>
+
+            <h3>4.4 Reset da BIOS (CMOS)</h3>
+            <ul>
+                <li>Remova a bateria CR2032 por 10-30 segundos</li>
+                <li>Ou use o jumper CLR_CMOS</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 🛠️ Como Resolver Problemas</h2>
+            <table>
+                <tr>
+                    <th>Problema</th>
+                    <th>Solução recomendada</th>
+                </tr>
+                <tr>
+                    <td>Placa não liga</td>
+                    <td>Testar com outra fonte e mínimo de peças</td>
+                </tr>
+                <tr>
+                    <td>Capacitores estufados</td>
+                    <td>Substituir (se tiver ferramentas e conhecimento)</td>
+                </tr>
+                <tr>
+                    <td>CMOS corrompido</td>
+                    <td>Reset via jumper ou bateria</td>
+                </tr>
+                <tr>
+                    <td>Problemas com portas (USB, SATA, etc.)</td>
+                    <td>Testar em outro sistema; se persistir, pode estar danificada</td>
+                </tr>
+                <tr>
+                    <td>BIOS corrompida</td>
+                    <td>Regravar BIOS (avançado) ou atualizar via pendrive</td>
+                </tr>
+                <tr>
+                    <td>Placa liga mas não dá vídeo</td>
+                    <td>Testar outra RAM, outro vídeo, e resetar BIOS</td>
+                </tr>
+                <tr>
+                    <td>Placa com chipset superaquecendo</td>
+                    <td>Verificar VRM, dissipadores, aplicar nova pasta térmica</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>6. 🧰 Dicas de Boas Práticas</h2>
+            <ul>
+                <li>Sempre usar pulseira antiestática ao manusear placas-mãe.</li>
+                <li>Nunca forçar componentes nos slots (RAM, CPU, PCI).</li>
+                <li>Manter a placa-mãe limpa e livre de poeira.</li>
+                <li>Verificar sempre o manual da placa-mãe para pinos, jumper, compatibilidades.</li>
+                <li>Usar espaçadores (standoffs) ao parafusar a placa no gabinete – evita curto!</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. 📚 Exercício Prático Sugerido</h2>
+            <ol>
+                <li>Montar um teste de bancada com placa-mãe, processador e RAM.</li>
+                <li>Verificar sinais visuais de defeitos.</li>
+                <li>Testar com uma fonte funcional e registrar comportamento.</li>
+                <li>Realizar reset de CMOS com o jumper.</li>
+                <li>Identificar beeps com speaker conectado (se disponível).</li>
+                <li>Simular um erro com capacitor estufado (foto ou peça defeituosa).</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>📚 Leitura Complementar</h2>
+            <p>Para aprender mais sobre manutenção da placa-mãe, recomendamos também nosso guia sobre:</p>
+            <ul>
+                <li><a href="bios.html" style="color: var(--secondary-blue); text-decoration: none;">Restaurando e Atualizando o BIOS</a> - Um guia completo para iniciantes sobre como gerenciar o BIOS de forma segura.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

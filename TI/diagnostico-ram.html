@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Memória RAM - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .code-block {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Diagnóstico e Solução de Problemas em Memória RAM</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🎯 Objetivo da Aula</h2>
+            <p>Ensinar como identificar problemas relacionados à memória RAM, realizar testes práticos (incluindo via CMD), e aplicar soluções adequadas para garantir o funcionamento estável do sistema.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. 🧠 O que é Memória RAM?</h2>
+            <ul>
+                <li>RAM (Random Access Memory) é um tipo de memória volátil usada para armazenar dados temporários enquanto o computador está em uso.</li>
+                <li>Velocidade muito maior que o HD ou SSD.</li>
+                <li>Quanto mais RAM, melhor o desempenho multitarefa.</li>
+                <li>Tipos comuns: DDR3, DDR4, DDR5.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. ⚠️ Erros Mais Comuns em Memória RAM</h2>
+            
+            <h3>2.1 Travamentos aleatórios ou reinícios</h3>
+            <ul>
+                <li>Causa: Módulos com falha ou incompatíveis.</li>
+                <li>Sintomas: Congelamento da tela, sistema reinicia sozinho.</li>
+            </ul>
+
+            <h3>2.2 Tela azul (BSOD) com códigos relacionados à memória</h3>
+            <p>Códigos comuns: MEMORY_MANAGEMENT, IRQL_NOT_LESS_OR_EQUAL.</p>
+
+            <h3>2.3 Falha na instalação do sistema operacional</h3>
+            <ul>
+                <li>Causa: Erros durante leitura/escrita da RAM.</li>
+                <li>Sintomas: Mensagens de erro durante instalação, como "Windows não pôde instalar os arquivos necessários".</li>
+            </ul>
+
+            <h3>2.4 Sistema não inicia ou beeps ao ligar</h3>
+            <ul>
+                <li>Causa: Módulo mal encaixado ou com defeito.</li>
+                <li>Sintomas: Nenhum vídeo, beeps específicos de erro de RAM.</li>
+            </ul>
+
+            <h3>2.5 Lentidão anormal</h3>
+            <p>Causa: Quantidade de RAM insuficiente ou módulo defeituoso operando abaixo do normal.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. 🔍 Como Identificar Problemas de RAM</h2>
+            <table>
+                <tr>
+                    <th>Sintoma</th>
+                    <th>Relação com RAM?</th>
+                </tr>
+                <tr>
+                    <td>Travamentos e reinícios</td>
+                    <td>✅ Sim</td>
+                </tr>
+                <tr>
+                    <td>BSOD com erro MEMORY_MANAGEMENT</td>
+                    <td>✅ Sim</td>
+                </tr>
+                <tr>
+                    <td>Lentidão mesmo com SSD</td>
+                    <td>✅ Possível</td>
+                </tr>
+                <tr>
+                    <td>Sem vídeo e beep curto contínuo</td>
+                    <td>✅ Provável</td>
+                </tr>
+                <tr>
+                    <td>Vídeo com artefatos coloridos</td>
+                    <td>❌ Provavelmente GPU</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>4. 🧪 Como Testar a Memória RAM</h2>
+            
+            <h3>4.1 Teste Físico</h3>
+            <ul>
+                <li>Verifique se os módulos estão bem encaixados.</li>
+                <li>Tente iniciar com um módulo por vez.</li>
+                <li>Limpe os contatos com borracha branca (cuidado com eletricidade estática).</li>
+            </ul>
+
+            <h3>4.2 Teste com Software (ambiente Windows)</h3>
+            <p>🖥️ Teste de Memória RAM via CMD</p>
+            <ol>
+                <li>Pressione Windows + R, digite cmd e pressione Enter.</li>
+                <li>No prompt, digite:</li>
+            </ol>
+            <div class="code-block">mdsched.exe</div>
+
+            <p>Escolha:</p>
+            <p>"Reiniciar agora e verificar se há problemas" – o sistema será reiniciado e o teste será feito antes da inicialização do Windows.</p>
+            <p>O Windows Memory Diagnostic Tool será executado. Ele testará blocos da RAM em busca de falhas.</p>
+
+            <p>📝 Resultado:</p>
+            <ul>
+                <li>Após o teste, o resultado será exibido na próxima vez que você fizer login.</li>
+                <li>Ou acesse o Visualizador de Eventos:
+                    <ol>
+                        <li>Pressione Win + X → Visualizador de Eventos → Logs do Windows → Sistema.</li>
+                        <li>Filtrar por fonte: MemoryDiagnostics-Results.</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <h3>4.3 Outros programas úteis:</h3>
+            <ul>
+                <li>MemTest86 (bootável por pendrive) – teste profundo, confiável.</li>
+                <li>HCI MemTest – roda no Windows, ideal para checar erros sutis.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. 🛠️ Como Resolver Problemas</h2>
+            <table>
+                <tr>
+                    <th>Problema</th>
+                    <th>Solução recomendada</th>
+                </tr>
+                <tr>
+                    <td>RAM mal encaixada</td>
+                    <td>Reinstalar com cuidado</td>
+                </tr>
+                <tr>
+                    <td>Slot da placa-mãe com defeito</td>
+                    <td>Testar outro slot</td>
+                </tr>
+                <tr>
+                    <td>Módulo defeituoso</td>
+                    <td>Substituir ou testar individualmente</td>
+                </tr>
+                <tr>
+                    <td>Incompatibilidade com placa</td>
+                    <td>Verificar no manual (frequência, tipo)</td>
+                </tr>
+                <tr>
+                    <td>Erros intermitentes</td>
+                    <td>Teste prolongado com MemTest86</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>6. 🧰 Dicas de Boas Práticas</h2>
+            <ul>
+                <li>Sempre descarregue a eletricidade estática antes de manusear RAM.</li>
+                <li>Nunca misture módulos de marcas/velocidades diferentes, se possível.</li>
+                <li>Evite forçar o encaixe – respeite a chave do slot.</li>
+                <li>Atualize a BIOS para maior compatibilidade de memória, se necessário.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
