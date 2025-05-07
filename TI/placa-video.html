@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placa de Vídeo - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .important-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-orange);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tip {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--secondary-orange);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Placa de Vídeo</h1>
+        <p>Entendendo e Escolhendo Corretamente</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>O que é a Placa de Vídeo e Como Funciona</h2>
+            <p>A placa de vídeo (ou GPU) é um componente responsável por gerar e exibir as imagens na tela do seu computador. Ela realiza processamentos gráficos, como os necessários para:</p>
+            <ul>
+                <li>Jogos</li>
+                <li>Edição de vídeo e imagem</li>
+                <li>Animações 3D</li>
+                <li>Efeitos visuais</li>
+                <li>Modelagem, engenharia e muito mais</li>
+            </ul>
+
+            <h3>Como funciona?</h3>
+            <p>A GPU (Graphics Processing Unit) trabalha como um mini processador especializado em gráficos. Ela alivia o processador principal (CPU) dessa tarefa, melhorando o desempenho geral do computador em aplicações visuais.</p>
+
+            <div class="important-note">
+                <p>Existem dois tipos de placas:</p>
+                <ul>
+                    <li><strong>Integrada:</strong> já vem dentro do processador, com desempenho limitado. Suficiente para tarefas básicas.</li>
+                    <li><strong>Dedicada:</strong> é uma peça separada, com desempenho muito superior. Ideal para jogos, edição, renderização etc.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>O Que Acontece Quando Falta Uma Boa GPU?</h2>
+            <p>Se seu computador não tiver uma placa de vídeo dedicada e você quiser jogar ou editar vídeos, pode enfrentar:</p>
+            <ul>
+                <li>Baixa qualidade gráfica</li>
+                <li>Travamentos ou lentidão</li>
+                <li>Impossibilidade de abrir certos programas</li>
+                <li>Desempenho limitado mesmo com um bom processador</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Informações Importantes ao Comprar uma GPU</h2>
+            
+            <h3>1. VRAM (Memória da Placa de Vídeo)</h3>
+            <p>É como a memória RAM, mas exclusiva para gráficos. Armazena texturas, sombras e dados visuais.</p>
+            <ul>
+                <li>2 GB: básico, tarefas leves</li>
+                <li>4 GB: jogos leves, 1080p com qualidade reduzida</li>
+                <li>6 GB: já roda bem a maioria dos jogos em 1080p</li>
+                <li>8 GB ou mais: ideal para jogos atuais, 2K ou 4K, edição de vídeo, etc.</li>
+            </ul>
+            <div class="tip">
+                <p>Mais VRAM ≠ mais desempenho, mas ajuda em resoluções e jogos pesados.</p>
+            </div>
+
+            <h3>2. Tipo de Memória (GDDR5, GDDR6, GDDR6X)</h3>
+            <p>É a geração da memória da GPU:</p>
+            <ul>
+                <li>GDDR5: mais antiga, ainda usada em placas intermediárias</li>
+                <li>GDDR6: mais rápida, comum nas placas modernas</li>
+                <li>GDDR6X: ainda mais veloz, usada em modelos topo de linha</li>
+            </ul>
+            <div class="tip">
+                <p>Quanto mais recente, maior a largura de banda, ou seja, mais rapidez no envio e leitura de dados gráficos.</p>
+            </div>
+
+            <h3>3. Clock da GPU e Núcleos CUDA / Stream Processors</h3>
+            <p>A GPU funciona como o "cérebro" da placa de vídeo. E assim como o processador (CPU), ela também tem:</p>
+            <ul>
+                <li>Clock (velocidade de funcionamento, medida em MHz ou GHz)</li>
+                <li>Núcleos de processamento gráfico (CUDA Cores para NVIDIA / Stream Processors para AMD)</li>
+            </ul>
+
+            <div class="important-note">
+                <p><strong>Clock da GPU – A Velocidade da Placa</strong></p>
+                <ul>
+                    <li>Base Clock: frequência mínima de operação</li>
+                    <li>Boost Clock: frequência máxima que a placa pode atingir automaticamente</li>
+                </ul>
+                <p>Quanto maior o clock, mais rápida é a GPU em processar dados gráficos.</p>
+            </div>
+
+            <div class="important-note">
+                <p><strong>CUDA Cores (NVIDIA) / Stream Processors (AMD)</strong></p>
+                <ul>
+                    <li>São os núcleos de processamento gráfico paralelos</li>
+                    <li>Quanto mais núcleos, mais tarefas a GPU consegue fazer ao mesmo tempo</li>
+                    <li>NVIDIA chama de CUDA Cores</li>
+                    <li>AMD chama de Stream Processors</li>
+                </ul>
+            </div>
+
+            <h3>4. Conectores de Alimentação</h3>
+            <p>Algumas placas precisam de energia extra da fonte, por meio de conectores PCIe:</p>
+            <ul>
+                <li>6 pinos</li>
+                <li>8 pinos</li>
+                <li>2x8 pinos ou mais em placas topo de linha</li>
+            </ul>
+            <div class="important-note">
+                <p>Sempre verifique se sua fonte tem os conectores certos!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tecnologias Modernas nas GPUs</h2>
+            <p>Hoje, as placas de vídeo mais modernas vêm com tecnologias avançadas que melhoram o desempenho mesmo sem aumentar o uso de energia:</p>
+
+            <h3>1. DLSS (Deep Learning Super Sampling)</h3>
+            <p>Tecnologia da NVIDIA que usa inteligência artificial para gerar imagens em alta qualidade a partir de resoluções mais baixas, aumentando os FPS sem perda visual.</p>
+
+            <h3>2. FSR (FidelityFX Super Resolution)</h3>
+            <p>Versão da AMD do DLSS, também foca em escalar imagens com qualidade e aumentar o desempenho.</p>
+
+            <h3>3. Frame Generation com IA</h3>
+            <p>Geração de quadros extras usando aprendizado de máquina (ex: DLSS 3). Isso duplica os FPS sem exigir muito da GPU.</p>
+
+            <h3>4. Ray Tracing</h3>
+            <p>Simula a iluminação realista em tempo real nos jogos, com reflexos e sombras avançadas.</p>
+
+            <div class="tip">
+                <p>Nem todas as placas suportam essas tecnologias. Confira no modelo antes de comprar.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Como Comprar Corretamente</h2>
+            <h3>Passo a Passo</h3>
+            <ol>
+                <li>Pesquise o jogo ou programa que deseja usar. Veja a placa de vídeo recomendada.</li>
+                <li>Veja quanta VRAM é indicada para o uso pretendido.</li>
+                <li>Verifique a versão da memória (GDDR) e recursos como DLSS ou FSR se forem úteis para você.</li>
+                <li>Compare benchmarks reais entre modelos no YouTube ou sites como:
+                    <ul>
+                        <li>userbenchmark.com</li>
+                        <li>gpu.userbenchmark.com</li>
+                        <li>techpowerup.com</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="important-note">
+                <p>Verifique se:</p>
+                <ul>
+                    <li>Sua placa-mãe tem slot PCIe x16 (padrão da maioria das GPUs)</li>
+                    <li>Sua fonte tem os conectores corretos (6p/8p) para alimentar a placa</li>
+                    <li>Sua fonte aguenta a potência exigida pela GPU (use o site de cálculo de energia)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

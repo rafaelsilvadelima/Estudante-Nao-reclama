@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte de Alimentação - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .important-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-orange);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .tip {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--secondary-orange);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Fonte de Alimentação</h1>
+        <p>Como Escolher a Fonte de Alimentação do PC</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>O Que é a Fonte de Alimentação?</h2>
+            <p>A Fonte de Alimentação, ou PSU (Power Supply Unit), é o componente responsável por distribuir energia elétrica para todas as outras peças do computador. Ela transforma a energia da tomada (geralmente 110V ou 220V) em voltagens menores e específicas (como 12V, 5V e 3.3V), usadas por componentes como:</p>
+            <ul>
+                <li>Placa-mãe</li>
+                <li>Processador (CPU)</li>
+                <li>Placa de vídeo (GPU)</li>
+                <li>Memória RAM</li>
+                <li>Armazenamento (HDs, SSDs)</li>
+                <li>Ventoinhas e iluminação</li>
+            </ul>
+            <div class="important-note">
+                <p>Sem uma fonte adequada, seu computador pode:</p>
+                <ul>
+                    <li>Não ligar</li>
+                    <li>Travar ou reiniciar sozinho</li>
+                    <li>Danificar as peças com o tempo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>O Que Você Precisa Saber Sobre Fontes</h2>
+            
+            <h3>1. Potência (Watts)</h3>
+            <p>A potência define quanta energia a fonte consegue entregar para os componentes do computador.</p>
+            <p>Exemplo prático:</p>
+            <ul>
+                <li>Um PC simples (sem placa de vídeo) pode usar 300W.</li>
+                <li>Um PC gamer com placa de vídeo dedicada pode exigir 550W a 750W ou mais.</li>
+            </ul>
+            <div class="important-note">
+                <p><strong>Potência real vs Potência nominal:</strong></p>
+                <ul>
+                    <li>Potência real é a energia que a fonte consegue fornecer de verdade, com segurança.</li>
+                    <li>Potência nominal é o número que aparece nas fontes genéricas (ex: 500W), mas que não é confiável — muitas vezes a fonte entrega bem menos.</li>
+                </ul>
+                <p>Sempre escolha fontes com potência real, de marcas confiáveis.</p>
+            </div>
+
+            <h3>2. Certificações de Eficiência (80 PLUS)</h3>
+            <p>A certificação 80 PLUS mostra o quanto da energia da tomada está sendo usada de forma eficiente, com menos perda em forma de calor.</p>
+            <p>Níveis:</p>
+            <ul>
+                <li>White (Básico)</li>
+                <li>Bronze (Recomendado para maioria dos PCs)</li>
+                <li>Silver, Gold, Platinum, Titanium (melhor eficiência, custo mais alto)</li>
+            </ul>
+            <div class="tip">
+                <p>Para uso comum ou gamer intermediário, 80 PLUS Bronze já é uma escolha segura e eficiente.</p>
+            </div>
+
+            <h3>3. Conectores e Cabos</h3>
+            <p>Cada componente do PC precisa de um tipo de cabo. A fonte precisa ter:</p>
+            <ul>
+                <li>24 pinos (placa-mãe)</li>
+                <li>4 ou 8 pinos (processador)</li>
+                <li>6 ou 8 pinos PCIe (placa de vídeo)</li>
+                <li>SATA (HDs/SSDs)</li>
+                <li>Molex (ventoinhas mais antigas)</li>
+            </ul>
+            <div class="important-note">
+                <p>Verifique antes de comprar se a fonte tem todos os cabos que seu computador precisa.</p>
+            </div>
+
+            <h3>4. Tipos de Fontes</h3>
+            <ul>
+                <li><strong>Fixa:</strong> todos os cabos vêm presos à fonte. Mais barata, mas mais difícil de organizar.</li>
+                <li><strong>Semi-modular:</strong> só os cabos essenciais são fixos. Menos bagunça.</li>
+                <li><strong>Modular:</strong> todos os cabos podem ser desconectados. Melhor organização, mas mais cara.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Como Escolher a Fonte Certa</h2>
+            <h3>Passo a Passo para Escolher Sem Errar</h3>
+            <ol>
+                <li>Saiba a configuração do seu PC: anote ou monte a lista de peças (processador, placa de vídeo, quantidade de memória, etc.).</li>
+                <li>Evite fontes genéricas, mesmo que sejam mais baratas. Elas podem danificar seu computador.</li>
+                <li>Escolha uma fonte com potência real suficiente e certificação 80 PLUS (preferencialmente Bronze ou superior).</li>
+            </ol>
+
+            <p>Verifique se a fonte tem:</p>
+            <ul>
+                <li>Potência adequada (com margem de segurança)</li>
+                <li>Certificação de eficiência energética (80 PLUS)</li>
+                <li>Todos os conectores certos, incluindo:
+                    <ul>
+                        <li>Conector de 24 pinos para a placa-mãe</li>
+                        <li>Conector de 4 ou 8 pinos para o processador</li>
+                        <li>Conectores SATA e Molex para HDs/SSDs e ventoinhas</li>
+                        <li>Conectores PCIe para a placa de vídeo</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="important-note">
+                <p><strong>Importante!</strong></p>
+                <p>Antes de comprar a fonte, veja quantos pinos sua placa de vídeo exige.</p>
+                <p>Algumas placas de vídeo precisam de:</p>
+                <ul>
+                    <li>1 conector de 6 pinos</li>
+                    <li>1 conector de 8 pinos</li>
+                    <li>2 conectores de 8 pinos</li>
+                    <li>Ou até mais, em modelos mais potentes</li>
+                </ul>
+                <p>Se sua fonte não tiver os conectores PCIe corretos, a placa de vídeo não funcionará!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Usando o Calculador de Fonte</h2>
+            <p>Para descobrir quanta potência o seu PC vai consumir, acesse:</p>
+            <p><a href="https://pc-builds.com/pt/power-supply-calculator/" target="_blank" style="color: var(--secondary-blue);">🔗 Calculadora de Fonte</a></p>
+
+            <h3>Como usar:</h3>
+            <ol>
+                <li>Escolha os componentes (CPU, GPU, quantidade de memória, HDs, etc.).</li>
+                <li>O site vai calcular a potência total necessária.</li>
+                <li>Soma de segurança: adicione 30% de margem à potência indicada para garantir estabilidade e futuras atualizações.</li>
+            </ol>
+
+            <div class="tip">
+                <p><strong>Exemplo:</strong></p>
+                <p>Se o cálculo disser que o PC consome 400W, o ideal é comprar uma fonte de pelo menos 550W reais com certificação.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Dicas Finais</h2>
+            <ul>
+                <li>✅ Nunca compre fontes genéricas, mesmo que prometam 600W ou mais.</li>
+                <li>✅ Verifique a potência real, certificação e cabos antes de comprar.</li>
+                <li>✅ Use o calculador online para evitar surpresas.</li>
+                <li>✅ Pense no futuro: se você pretende colocar uma placa de vídeo depois, já compre uma fonte compatível.</li>
+                <li>✅ Organização e refrigeração: fontes modulares ou semi-modulares ajudam a deixar o PC mais limpo e com melhor ventilação.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
