@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Comprar Componentes - Blog Educacional</title>
+    <style>
+        :root {
+            --primary-blue: #1e3d59;
+            --secondary-blue: #3a7ca5;
+            --primary-orange: #ff6e40;
+            --secondary-orange: #ffc13b;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            margin-bottom: 100px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: var(--secondary-blue);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1.5rem;
+            }
+
+            .back-link {
+                position: static;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../ti.html" class="back-link">← Voltar</a>
+        <h1>Como Comprar Processador, Placa-Mãe e RAM</h1>
+        <p>Guia Completo para Iniciantes</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>🎯 Objetivo da Aula</h2>
+            <p>Ensinar de forma clara e prática como escolher processador, placa-mãe e memória RAM de forma compatível, explicando o que observar em cada peça e como montar uma configuração harmoniosa.</p>
+        </div>
+
+        <div class="section">
+            <h2>🧩 Parte 1 – Entendendo as Peças</h2>
+            
+            <h3>🔧 1. Processador (CPU)</h3>
+            <p>Para saber se é bom, olhe:</p>
+            <ul>
+                <li>Núcleos e Threads: quanto mais, melhor para multitarefas.</li>
+                <li>Frequência (GHz): indica a velocidade de trabalho. Mais GHz = mais rapidez em tarefas simples.</li>
+                <li>Soquete: é o "encaixe" do processador na placa-mãe. É ESSENCIAL saber o soquete porque define qual placa-mãe você pode usar.</li>
+            </ul>
+            <p>📌 Exemplo: Um processador Intel i5-12400 usa soquete LGA 1700. Só placas com esse soquete servirão.</p>
+
+            <h3>🧩 2. Placa-Mãe (Motherboard)</h3>
+            <p>Você vai olhar principalmente:</p>
+            <ul>
+                <li>Soquete da CPU: tem que ser igual ao do processador escolhido.</li>
+                <li>Slots de memória RAM:
+                    <ul>
+                        <li>Veja quantos (ex: 2 ou 4 slots).</li>
+                        <li>Veja qual tipo de RAM aceita: DDR3, DDR4, DDR5.</li>
+                    </ul>
+                </li>
+                <li>Frequência máxima da RAM suportada: Se a placa suporta até 3200 MHz, você não deve comprar RAM acima disso.</li>
+                <li>Tamanho (formato): ATX, MicroATX, Mini-ITX (influencia no gabinete).</li>
+            </ul>
+            <p>🎓 Dica: Use a placa-mãe como base para decidir qual RAM comprar depois.</p>
+
+            <h3>💾 3. Memória RAM</h3>
+            <p>Você vai olhar:</p>
+            <ul>
+                <li>Quantidade (GB): 8GB é o mínimo para uso básico. 16GB ou mais é ideal para jogos e multitarefa.</li>
+                <li>Frequência (MHz): mais MHz = mais velocidade de leitura/escrita.</li>
+                <li>Ciclos (CL - CAS Latency): indica o tempo de resposta. Menor CL = melhor (ex: CL16 é mais rápido que CL18).</li>
+                <li>Geração da RAM (DDR): deve ser a mesma suportada pela placa-mãe.</li>
+            </ul>
+            <p>📌 Atenção: RAM DDR3, DDR4 e DDR5 não são compatíveis entre si.</p>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Parte 2 – Sinergia das Peças</h2>
+            <p>Sinergia é quando todas as peças do seu PC "conversam" bem entre si. Isso evita desperdício de desempenho e garante que tudo funcione direito.</p>
+            
+            <h3>Como garantir sinergia:</h3>
+            <ol>
+                <li>Escolha o processador primeiro, pois ele determina o soquete da placa-mãe.</li>
+                <li>Com base no processador, compre uma placa-mãe compatível (mesmo soquete e geração).</li>
+                <li>Com base na placa-mãe, escolha a RAM correta (geração e frequência suportadas).</li>
+                <li>Confira o tamanho do gabinete e se há espaço para tudo.</li>
+                <li>Use fontes confiáveis, vídeos, fóruns e simuladores (como PCPartPicker ou Terabyteshop).</li>
+            </ol>
+            <p>📌 Erro comum: Comprar uma RAM DDR5 para uma placa que só aceita DDR4.</p>
+        </div>
+
+        <div class="section">
+            <h2>🛒 Parte 3 – Mini Guia de Compra Passo a Passo</h2>
+            <h3>✅ Etapas para comprar as peças certas:</h3>
+            <ol>
+                <li>Pesquise o programa, jogo ou software que você quer usar
+                    <ul>
+                        <li>Ex: Quero jogar Fortnite, editar vídeos no Premiere, programar.</li>
+                    </ul>
+                </li>
+                <li>Veja o processador recomendado
+                    <ul>
+                        <li>Ex: Requisitos mínimos: Intel i5-10400 ou Ryzen 5 3600</li>
+                    </ul>
+                </li>
+                <li>Procure o soquete do processador escolhido
+                    <ul>
+                        <li>Ex: i5-10400 usa soquete LGA 1200</li>
+                    </ul>
+                </li>
+                <li>Escolha uma placa-mãe com o mesmo soquete e tipo de RAM compatível
+                    <ul>
+                        <li>Ex: Placa-mãe LGA 1200, DDR4, suporta até 2933 MHz</li>
+                    </ul>
+                </li>
+                <li>Escolha a memória RAM compatível com a placa-mãe
+                    <ul>
+                        <li>Ex: 16GB DDR4 2666 MHz CL16</li>
+                    </ul>
+                </li>
+                <li>Confira a compatibilidade geral e o tamanho do gabinete</li>
+                <li>Verifique se sua fonte de alimentação é suficiente para o conjunto</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>📚 Informações Extras Importantes</h2>
+            <ul>
+                <li>BIOS/UEFI: pode precisar de atualização para novos processadores.</li>
+                <li>Dual Channel de RAM: usar 2 pentes iguais melhora o desempenho.</li>
+                <li>Chipset da Placa-Mãe: influencia em recursos extras como overclock, número de portas, etc.</li>
+                <li>Simuladores online: sites como PCPartPicker ajudam a verificar compatibilidade entre peças.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📌 Conclusão</h2>
+            <p>"Sempre que for montar um PC, pense como um quebra-cabeça: cada peça precisa encaixar na outra, e a escolha do processador define o formato das outras peças."</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rafael Silva de Lima. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
